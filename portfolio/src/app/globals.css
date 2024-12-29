@@ -19,13 +19,16 @@
 
 body {
   color: var(--foreground);
-  background: var(--background);
-  height: 200vh;
-  /* font-family: 'Poppins', Helvetica, sans-serif; */
+  background-image: url('/background.jpg');
+  background-size:cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  backdrop-filter: blur(10px);
+  height: 100vh;
 }
 
 .navbar, .links {
-  transition: all 1s ease-in-out;
+  transition: all 0.7s ease-in-out;
 }
 
 
