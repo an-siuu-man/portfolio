@@ -6,7 +6,8 @@ import background from '../../public/background.jpg';
 
 
 import Navbar from "./components/Navbar";
-import Landing from "./components/About";
+import About from "./components/About";
+import Experience from "./components/Experience";
 export default function Home() {
 
   const backgroundImage = {
@@ -22,11 +23,12 @@ export default function Home() {
   
 
   return (
-    <div className=" relative w-full">
+    <div className=" w-full">
       {/* <div style={backgroundImage}></div> */}
 
       <Navbar />
-      <Landing />
+      <About />
+      <Experience />
     </div>
   );
 }

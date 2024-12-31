@@ -18,17 +18,24 @@
 }
 
 body {
-  color: var(--foreground);
-  background-image: url('/background.jpg');
+  color: #ededed;
+  background: #2D2D2D;
+  /* background-image: url('/background.jpg');
   background-size:cover;
   background-position: center;
   background-repeat: no-repeat;
   backdrop-filter: blur(10px);
-  height: 100vh;
+  height: 100vh; */
+  height: 200vh;
+
 }
 
-.navbar, .links {
-  transition: all 0.7s ease-in-out;
+.navbar{
+  transition: width 0.7s ease-in-out 
+}
+
+.links {
+  transition: opacity 0.9s ease-in-out;
 }
 
 
