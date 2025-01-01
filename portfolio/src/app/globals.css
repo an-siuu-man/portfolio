@@ -16,10 +16,12 @@
     --foreground: #ededed;
   }
 }
-
+html {
+  scroll-behavior: smooth;
+}
 body {
-  color: #ededed;
-  background: #2D2D2D;
+  color: #a5a5a5;
+  background: linear-gradient(to bottom, #2D2D2D, #1E1E1E, #171717);
   /* background-image: url('/background.jpg');
   background-size:cover;
   background-position: center;
