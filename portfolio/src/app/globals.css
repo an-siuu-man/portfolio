@@ -28,8 +28,7 @@ body {
   background-repeat: no-repeat;
   backdrop-filter: blur(10px);
   height: 100vh; */
-  height: 200vh;
-
+  margin-bottom: 20%;
 }
 
 .navbar{

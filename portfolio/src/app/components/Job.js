@@ -1,5 +1,5 @@
 import { useState } from 'react';
-
+import Skill from './Skill';
 
 export default function Job(props) {
 
@@ -21,7 +21,14 @@ export default function Job(props) {
                 <h2 className='font-inter font-regular text-3xl mb-2'>{props.company}</h2>
                 {isVisible && <p className='font-dmsans font-light text-lg'>{props.date}</p>}
                 {isVisible && <p className='font-dmsans font-light text-lg mb-2'>{props.location}</p>}
+                {isVisible && <div className='flex flex-row flex-wrap'>
+                    {props.skills.map((skill, index) => {
+                        return <Skill key = {index} skill = {skill}/>
+                    }
+                    )}
+                </div>}
                 {isVisible && <p className='font-dmsans font-light text-lg'>{props.description}</p>}
+
             </div>
         </div>
     );
