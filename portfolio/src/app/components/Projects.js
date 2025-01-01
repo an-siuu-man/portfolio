@@ -33,7 +33,7 @@ export default function Projects() {
     }, []);
 
     return (
-        <div className="flex flex-col justify-start items-center mt-[20vh]  overflow-x-hidden">
+        <div className="flex flex-col justify-start items-center mt-[20vh] overflow-hidden">
             <div
             ref={projectsRef} 
             className="projects translate-y-[200px] w-full transition duration-1000 flex px-20 flex-row items-stretch opacity-0">

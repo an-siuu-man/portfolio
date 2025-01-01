@@ -73,7 +73,7 @@ export default function About () {
 
 
     return (
-      <div className="flex flex-col justify-start items-center mt-[20vh]  overflow-x-hidden">
+      <div className="flex flex-col justify-start items-center mt-[20vh] overflow-hidden">
         <div className="about transition duration-700 opacity-0 flex flex-row items-stretch justify-start px-20">
           <div className='left w-[50%] flex flex-col border-[transparent] border-r-[#2e70db] border-r-2 transition duration-700 translate-y-[200px] items-center justify-start'>
             <div className="photo-container">
