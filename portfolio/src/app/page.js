@@ -8,6 +8,7 @@ import background from '../../public/background.jpg';
 import Navbar from "./components/Navbar";
 import About from "./components/About";
 import Experience from "./components/Experience";
+import Projects from "./components/Projects";
 export default function Home() {
 
   const backgroundImage = {
@@ -29,6 +30,7 @@ export default function Home() {
       <Navbar />
       <About />
       <Experience />
+      <Projects />
     </div>
   );
 }

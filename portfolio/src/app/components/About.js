@@ -65,7 +65,7 @@ export default function About () {
       if (experienceSection) {
         experienceSection.scrollIntoView({ behavior: 'smooth' });
         setTimeout(() => {
-          window.scrollBy(0, -50); // Adjust the value (-50) to scroll a few pixels above the div
+          window.scrollBy(0, -75); // Adjust the value (-50) to scroll a few pixels above the div
         }, 500); // Adjust the timeout duration if necessary
       }
     }

@@ -36,7 +36,7 @@ export default function Experience() {
   }, []);
 
   return (
-    <div className="flex justify-center items-center">
+    <div className="flex flex-col justify-start items-center mt-[20vh]  overflow-x-hidden">
       <div
         ref={experienceRef}
         className="experience translate-y-[200px] w-full transition duration-1000 flex px-20 flex-row items-stretch opacity-0"
