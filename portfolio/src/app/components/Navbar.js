@@ -33,10 +33,23 @@ export default function Navbar() {
       }, 300);
     }
 
-    window.addEventListener('resize', handleResize);
+    const handleScroll = () => {
+      const navbarContainer = document.querySelector('.navbar-container');
+      if (window.scrollY === 0) {
+        navbar.style.width = '90%';
+        navbarContainer.style.backgroundColor = 'transparent';
+      } else {
+        navbar.style.width = '80%';
+        navbarContainer.style.backgroundColor = '#1e1e1e';
+        navbarContainer.style.fontColor = 'white';
+      }
+    };
 
+    window.addEventListener('resize', handleResize);
+    window.addEventListener('scroll', handleScroll);
     return () => {
       window.removeEventListener('resize', handleResize);
+      window.removeEventListener('scroll', handleScroll);
     };
   }, []);
 
@@ -63,7 +76,7 @@ export default function Navbar() {
   };
 
   return (
-    <div className="flex justify-center sticky top-0 z-50 pb-4 bg-[#2d2d2d] items-center mb-4">
+    <div className="navbar-container transition duration-500 flex justify-center sticky top-0 z-50 pb-4 bg-[#2d2d2d] items-center mb-4">
       <div className="navbar w-[6%] flex justify-between items-center mt-4">
         <h1 className="name-header z-50 font-cursive whitespace-nowrap absolute text-bold text-4xl cursor-pointer">Ansuman Sharma</h1>
         <div className="links opacity-0 flex ml-auto">
