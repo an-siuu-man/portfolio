@@ -1,6 +1,7 @@
 import photo from '../../../public/Photo.png';
 import Image from 'next/image';
 import { useEffect } from 'react';
+import DownArrowIcon from './DownArrow';
 
 export default function About () {
 
@@ -43,7 +44,7 @@ export default function About () {
     }, []);
 
     return (
-      <div className="flex justify-center items-start mt-[20vh] h-[100vh] overflow-x-hidden">
+      <div className="flex flex-col justify-center items-start mt-[20vh] h-[100vh] overflow-x-hidden">
         <div className="about transition duration-700 opacity-0 flex flex-row items-center justify-start px-20">
           <div className='left w-[50%] flex flex-col border-[transparent] border-r-[#2e70db] border-r-2 transition duration-700 translate-y-[200px] items-center justify-start'>
             <div className="photo-container">
@@ -71,7 +72,9 @@ export default function About () {
               In my free time you can find me playing soccer, doing calligraphy, or watching action comedy movies. Feel free to reach out to me for any queries, movie recommendations, or just to say hi!
             </p>
           </div>
+          {/* <DownArrowIcon /> */}
         </div>
+        <DownArrowIcon />
       </div>
     );
 }
