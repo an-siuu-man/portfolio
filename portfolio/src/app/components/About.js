@@ -73,7 +73,7 @@ export default function About () {
 
 
     return (
-      <div className="flex flex-col justify-start items-center mt-[20vh] overflow-hidden">
+      <div className="flex flex-col justify-start items-center mt-[20vh] h-full overflow-hidden">
         <div className="about transition duration-700 opacity-0 flex flex-row items-stretch justify-start px-20">
           <div className='left w-[50%] flex flex-col border-[transparent] border-r-[#2e70db] border-r-2 transition duration-700 translate-y-[200px] items-center justify-start'>
             <div className="photo-container">
@@ -83,7 +83,9 @@ export default function About () {
               alt="Ansuman Sharma"
               />
             </div>
-            <h1 className="font-inter font-semibold text-6xl text-center">Ansuman Sharma</h1>
+            <h1 className="font-inter font-semibold text-6xl text-center">
+              Ansuman Sharma
+            </h1>
             <p className="font-inter text-2xl text-center">
               University of Kansas
             </p>
@@ -103,8 +105,23 @@ export default function About () {
           </div>
         </div>
         {/* <DownArrow /> */}
-        <svg  onClick = {handleClick} width="100px" height="100px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path className = 'down-arrow opacity-0 cursor-pointer transition duration-500 hover:stroke-blue-500' onClick = {handleClick} d="M7 10L12 15L17 10" stroke="#a5a5a5" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round"/>
+        <svg
+          onClick={handleClick}
+          className="fixed bottom-0 left-1/2 transform -translate-x-1/2 mb-4"
+          width="100px"
+          height="100px"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            className="down-arrow opacity-0 cursor-pointer transition duration-500 hover:stroke-blue-500"
+            d="M7 10L12 15L17 10"
+            stroke="#a5a5a5"
+            strokeWidth="1"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
         </svg>
       </div>
     );

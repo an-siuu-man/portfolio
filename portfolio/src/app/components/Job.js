@@ -11,10 +11,11 @@ export default function Job(props) {
   return (
     <div className="mb-10">
       <div className='job flex flex-col justify-center items-left mb-10'>
-        <div className='flex flex-row justify-between items-center'>
-          <h1 className='font-inter font-semibold text-4xl'>{props.title}</h1>
+        <div
+            onClick={handleClick} 
+            className='flex flex-row justify-between items-center cursor-pointer'>
+          <h1 className='font-inter hover:text-[#2e70db] duration-200 font-semibold text-4xl'>{props.title}</h1>
           <svg
-            onClick={handleClick}
             className={`transition-transform duration-700 ease-in-out ${isVisible ? 'rotate-180' : 'rotate-0'}`}
             width="50px"
             height="50px"
