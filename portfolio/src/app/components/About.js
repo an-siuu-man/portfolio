@@ -57,6 +57,7 @@ export default function About() {
         image.style.transform = 'translateY(0)';
         image.style.opacity = '1';
         right.style.transform = 'translateX(0)';
+        right.style.opacity = '1';
         downArrow.style.opacity = '1';
         handleResize();
       }, 300);
@@ -97,7 +98,7 @@ export default function About() {
   }
 
   return (
-    <div className="flex flex-col justify-start items-center mt-[20vh] h-full overflow-hidden">
+    <div className="flex flex-col  justify-start items-center mt-[20vh] h-full overflow-hidden">
       <div ref={aboutRef} className="about transition duration-700 opacity-0 flex flex-row items-stretch justify-start px-20">
         <div className='left w-[50%] flex flex-col border-[transparent] border-r-[#2e70db] border-r-2 transition duration-700 translate-y-[200px] items-center justify-start'>
           <div className="photo-container">
@@ -114,7 +115,7 @@ export default function About() {
             University of Kansas
           </p>
         </div>
-        <div className='right w-[50%] p-4 transition duration-700 translate-x-[200px]'>
+        <div className='right opacity-0 w-[50%] p-4 transition duration-700 translate-x-[200px]'>
           <h1 className='font-inter font-semibold text-4xl'>
             Hey there, visitor!
           </h1>

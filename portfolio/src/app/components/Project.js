@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { useState } from "react";
-
+import Skill from "./Skill";
 export default function Project(props) {
   const [isHovered, setIsHovered] = useState(false);
 
@@ -29,11 +29,25 @@ export default function Project(props) {
           {props.title}
         </h1>
       </div>
-      <div className="flex flex-col text-center text-[#ddd] min-h-[150px] items-center bg-[#333] p-4 rounded-bl-xl rounded-br-xl">
+
+      <div className="flex flex-col text-center text-[#ddd] min-h-[150px] items-center bg-[#222] p-4 rounded-bl-xl rounded-br-xl">
+      <div className="flex flex-row justify-center items-center ">
+        {
+          props.skills.map((skill, index) => (
+            <Skill key={index} skill={skill} />
+          ))
+        }
+      </div>
         <p className="font-dmsans text-lg">
           {props.description}
         </p>
+      <div className={`flex flex-row justify-center items-baseline mt-4 w-full duration-700 ${isHovered ? 'max-h-screen opacity-1' : 'max-h-0 opacity-0'}`}>
+        <button className="bg-[#2e70db] hover:bg-[#1e60cb] duration-200 p-4 h-[20px] flex justify-center items-center font-dmsans rounded-full">
+          Github
+        </button>
       </div>
+      </div>
+
     </div>
   );
 }

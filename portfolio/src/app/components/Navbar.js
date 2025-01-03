@@ -40,7 +40,7 @@ export default function Navbar() {
         navbarContainer.style.backgroundColor = 'transparent';
       } else {
         navbar.style.width = '80%';
-        navbarContainer.style.backgroundColor = '#1e1e1e';
+        navbarContainer.style.backgroundColor = '#171717';
         navbarContainer.style.fontColor = 'white';
       }
     };
