@@ -41,7 +41,7 @@ export default function Projects() {
             <div
             ref={projectsRef} 
             className="projects translate-y-[200px] w-full transition duration-1000 flex px-20 flex-col items-center justify-start opacity-0">
-                <div className='flex flex-row items-stretch'>
+                <div className='flex flex-row items-stretch mb-10'>
                     <div className='left w-[50%] flex flex-col border-[transparent] border-r-[#2e70db] border-r-2 justify-start items-center'>
                         <h1 className="font-inter font-semibold text-6xl">Projects</h1>
                     </div>
