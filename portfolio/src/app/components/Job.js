@@ -14,7 +14,7 @@ export default function Job(props) {
         <div
             onClick={handleClick} 
             className='flex flex-row justify-between items-center cursor-pointer'>
-          <h1 className='font-inter hover:text-[#2e70db] duration-200 font-semibold text-4xl'>{props.title}</h1>
+          <h1 className={`${isVisible ? 'text-[#2e70db]' : ''} font-inter hover:text-[#2e70db] duration-200 font-semibold text-4xl`}>{props.title}</h1>
           <svg
             className={`transition-transform duration-700 ease-in-out ${isVisible ? 'rotate-180' : 'rotate-0'}`}
             width="50px"
@@ -24,7 +24,7 @@ export default function Job(props) {
             xmlns="http://www.w3.org/2000/svg"
           >
             <path
-              className='down-arrow opacity-1 cursor-pointer transition duration-700 ease-in-out hover:stroke-blue-500'
+              className={`${isVisible ? 'stroke-blue-500':''} down-arrow opacity-1 cursor-pointer transition duration-700 ease-in-out hover:stroke-blue-500`}
               d="M7 10L12 15L17 10"
               stroke="#a5a5a5"
               strokeWidth="1"

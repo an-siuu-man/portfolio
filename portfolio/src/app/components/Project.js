@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import Image from 'next/image';
+import Image from "next/image";
+import { useState } from "react";
 
 export default function Project(props) {
   const [isHovered, setIsHovered] = useState(false);
@@ -14,23 +14,26 @@ export default function Project(props) {
 
   return (
     <div
-      className="project w-[fit-content] relative"
+      className="flex flex-col justify-start rounded-xl overflow-hidden items-center m-4 max-w-[30vw]"
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
-      <Image
-        src={props.imageName}
-        className="project-image hover:cursor-pointer w-[500px] h-[281px] filter grayscale hover:grayscale-0 transition duration-500 ease-in-out"
-        alt="project image"
-      />
-      <p
-        className={`project-title absolute font-inter text-3xl font-semibold text-white rounded top-[250px] transition duration-500 ${
-          isHovered ? 'translate-y-0 opacity-100' : 'translate-y-[50px] opacity-0'
-        }`}
-      >
-        {props.title}
-      </p>
-      <p className="font-dmsans font-normal text-lg">{props.description}</p>
+      <div className="project flex flex-col relative justify-start items-center">
+        <Image
+          className={`rounded-tl-xl rounded-tr-xl transition duration-200 filter ${isHovered ? 'blur-0' : 'blur-sm'} w-[100%] `}
+          src={props.image}
+          alt={props.title}
+          height={300}
+        />
+        <h1 className="project-title py-2 absolute top-[0%] rounded-tr-xl rounded-tl-xl w-full text-center font-inter font-semibold text-white text-4xl">
+          {props.title}
+        </h1>
+      </div>
+      <div className="flex flex-col text-center text-[#ddd] min-h-[150px] items-center bg-[#333] p-4 rounded-bl-xl rounded-br-xl">
+        <p className="font-dmsans text-lg">
+          {props.description}
+        </p>
+      </div>
     </div>
   );
 }
