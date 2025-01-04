@@ -21,7 +21,7 @@ export default function Experience() {
     };
 
     const observer = new IntersectionObserver(handleIntersection, {
-      threshold: 0.4
+      threshold: 0.2
     });
 
     if (experienceRef.current) {
@@ -36,7 +36,7 @@ export default function Experience() {
   }, []);
 
   return (
-    <div className="flex flex-col justify-start items-center mt-[20vh]  overflow-hidden">
+    <div className="flex flex-col justify-start items-center my-[20vh] overflow-hidden">
       <div
         ref={experienceRef}
         className="experience translate-y-[200px] w-full transition duration-1000 flex px-20 flex-row items-stretch opacity-0"
@@ -45,8 +45,8 @@ export default function Experience() {
           <h1 className="font-inter font-semibold text-6xl">Experience</h1>
         </div>
         <div className='right w-[50%] flex flex-col p-4 transition duration-700 '>
-            <Job title  = 'Software Engineer Intern' company = 'Ascend Learning LLC' date = 'November 2024 - Present' location = 'Hybrid - Overland Park, KS' skills = {['.NET Core', 'SQL Server']} description = 'Utilizing C# .NET Core to develop API infrastructure for a new Faculty Course Enablement Portal in the Learning Management System. Collaborating within an agile team environment by participating in daily stand-ups, sprint planning, and iterative development cycles.'/>
-            <Job title = 'Enterprise Success Intern' company = 'UiPath Inc.' date = 'June 2024 - August 2024' location = 'Bellevue, WA' skills = {['.NET Core', 'SQL Server', 'Python', 'UiPath Apps']} description = 'Developed a centralized comprehensive repository to help users access hundreds of production-implemented use cases, business challenges, and case studies for enterprise-level clients. Designed efficient automation workflows to automatically generate comprehensive PowerPoints with the use case data within seconds. Reduced product use case research time for Technical Account Managers at the company by over 95%.' />
+            <Job title  = 'Software Engineer Intern' margin= 'mb-5' company = 'Ascend Learning LLC' date = 'November 2024 - Present' location = 'Hybrid - Overland Park, KS' skills = {['.NET Core', 'SQL Server']} description = 'Utilizing C# .NET Core to develop API infrastructure for a new Faculty Course Enablement Portal in the Learning Management System. Collaborating within an agile team environment by participating in daily stand-ups, sprint planning, and iterative development cycles.'/>
+            <Job title = 'Enterprise Success Intern' margin= 'mt-5' company = 'UiPath Inc.' date = 'June 2024 - August 2024' location = 'Bellevue, WA' skills = {['.NET Core', 'SQL Server', 'Python', 'UiPath Apps']} description = 'Developed a centralized comprehensive repository to help users access hundreds of production-implemented use cases, business challenges, and case studies for enterprise-level clients. Designed efficient automation workflows to automatically generate comprehensive PowerPoints with the use case data within seconds. Reduced product use case research time for Technical Account Managers at the company by over 95%.' />
         </div>
       </div>
     </div>

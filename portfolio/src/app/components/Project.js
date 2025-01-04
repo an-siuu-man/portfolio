@@ -42,8 +42,11 @@ export default function Project(props) {
           {props.description}
         </p>
       <div className={`flex flex-row justify-center items-baseline mt-4 w-full duration-700 ${isHovered ? 'max-h-screen opacity-1' : 'max-h-0 opacity-0'}`}>
-        <button className="bg-[#2e70db] hover:bg-[#1e60cb] duration-200 p-4 h-[20px] flex justify-center items-center font-dmsans rounded-full">
+        <button className="bg-[#2e70db] mx-2 hover:bg-[#1e60cb] duration-200 p-4 h-[20px] flex justify-center items-center font-dmsans rounded-full">
           Github
+        </button>
+        <button className="bg-[#2e70db] mx-2 hover:bg-[#1e60cb] duration-200 p-4 h-[20px] flex justify-center items-center font-dmsans rounded-full">
+          Devpost  
         </button>
       </div>
       </div>
