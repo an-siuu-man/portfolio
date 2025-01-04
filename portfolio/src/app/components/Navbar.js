@@ -81,7 +81,15 @@ export default function Navbar() {
       //   window.scrollBy(0, -75); // Adjust the value (-75) to scroll a few pixels above the div
       // }, 500); // Adjust the timeout duration if necessary
     }
-
+  function handleClick(ClassName) {
+    const section = document.querySelector(ClassName);
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth' });
+      setTimeout(() => {
+        window.scrollBy(0, -250); // Adjust the value (-75) to scroll a few pixels above the div
+      }, 500); // Adjust the timeout duration if necessary
+    }
+  }
 
 
   return (
@@ -90,9 +98,9 @@ export default function Navbar() {
         <h1 className="name-header z-50 font-cursive whitespace-nowrap absolute text-bold text-4xl cursor-pointer">Ansuman Sharma</h1>
         <div className="links opacity-0 flex ml-auto">
           <p onClick = {() => {handleAbout()}} className="link font-dmsans mx-[20px] cursor-pointer hover:text-[#2e70db] duration-100">About</p>
-          <p className="link font-dmsans mx-[20px] cursor-pointer hover:text-[#2e70db] duration-100">Experience</p>
-          <p className="link font-dmsans mx-[20px] cursor-pointer hover:text-[#2e70db] duration-100">Projects</p>
-          <p className="link font-dmsans mx-[20px] cursor-pointer hover:text-[#2e70db] duration-100">Contact</p>
+          <p onClick = {() => {handleClick('.experience')}} className="link font-dmsans mx-[20px] cursor-pointer hover:text-[#2e70db] duration-100">Experience</p>
+          <p onClick = {() => {handleClick('.projects')}} className="link font-dmsans mx-[20px] cursor-pointer hover:text-[#2e70db] duration-100">Projects</p>
+          <p onClick = {() => {handleClick('.contact')}} className="link font-dmsans mx-[20px] cursor-pointer hover:text-[#2e70db] duration-100">Contact</p>
         </div>
         <button className="block md:hidden ml-auto" onClick={toggleDropdown}>
           ☰
@@ -100,8 +108,8 @@ export default function Navbar() {
         {isDropdownOpen && (
           <div ref={dropdownRef} className="dropdown-menu absolute top-full right-0 rounded-xl bg-[#333] py-4 shadow-lg">
             <p onClick = {() => {handleAbout()}} className="link font-dmsans mx-[20px] cursor-pointer hover:text-[#2e70db] duration-100">About</p>
-            <p className="link font-dmsans mx-[20px] cursor-pointer hover:text-[#2e70db] duration-100">Experience</p>
-            <p className="link font-dmsans mx-[20px] cursor-pointer hover:text-[#2e70db] duration-100">Projects</p>
+            <p onClick = {() => {handleClick('.experience')}} className="link font-dmsans mx-[20px] cursor-pointer hover:text-[#2e70db] duration-100">Experience</p>
+            <p onClick = {() => {handleClick('.projects')}} className="link font-dmsans mx-[20px] cursor-pointer hover:text-[#2e70db] duration-100">Projects</p>
             <p className="link font-dmsans mx-[20px] cursor-pointer z-20 hover:text-[#2e70db] duration-100">Contact</p>
           </div>
         )}

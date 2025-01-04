@@ -21,7 +21,7 @@ export default function Experience() {
     };
 
     const observer = new IntersectionObserver(handleIntersection, {
-      threshold: 0.2
+      threshold: 0.1
     });
 
     if (experienceRef.current) {
@@ -36,7 +36,7 @@ export default function Experience() {
   }, []);
 
   return (
-    <div className="flex flex-col justify-start items-center my-[20vh] overflow-hidden">
+    <div className="flex flex-col justify-center items-center my-[25vh] h-[50vh] overflow-hidden">
       <div
         ref={experienceRef}
         className="experience translate-y-[200px] w-full transition duration-1000 flex px-20 flex-row items-stretch opacity-0"
