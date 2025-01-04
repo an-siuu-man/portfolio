@@ -48,13 +48,13 @@ export default function Projects() {
                     <div className='right w-[50%] flex flex-col p-4 mb-3 transition duration-700 '>
                         <p className='font-dmsans text-lg'>
                             Most of my projects are products of intense collaborative efforts with my peers in hackathon environments.
-                            I love participating in hackathons because I love the thrill of working with extremely tight deadlines and work on projects that have a real-world impact.
+                            I love participating in hackathons because I love the thrill of working with extremely tight deadlines and create solutions that have a real-world impact.
                         </p>
                     </div>
                 </div>
                 <div className='projects-container flex flex-row items-stretch justify-center max-w-[80vw] flex-wrap'>
                     <Project image = {project1} skills = {['Next.js', 'PostgreSQL','Flask']} title = 'CodeLingo</>' description = 'Winner in Hack K-State 2024, this web app helps users learn C++ with ease by letting them visualize their code in the form of dynamic boxes showing how variables are updated and functions are called.' />
-                    <Project image = {project2} skills = {['Next.js', 'Pinata IPFS', 'Whisper by OpenAI']} title = 'HackMidterms' description = 'This web app helps users, especially students, create flashcards and practice questions from their online lectures through a speech-to-text model for quick revision and make studying easier.'/>
+                    <Project image = {project2} skills = {['Next.js', 'Pinata IPFS', 'Whisper by OpenAI', 'Flask']} title = 'HackMidterms' description = 'This web app helps users, especially students, create flashcards and practice questions from their online lectures through a speech-to-text model for quick revision and make studying easier.'/>
                     <Project image = {project3} skills = {['Django', 'Flask', 'SerpAPI', 'Gemini']} title = 'Geogo' description = 'To make tourism easier, me and three of my peers developed this app to provide users with visa requirements, flight itenaries, popular tourist spots, and potential daily costs of travelling to any city with an international airport.' />
                 </div>
             </div>
