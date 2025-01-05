@@ -24,8 +24,7 @@ export default function Project(props) {
     >
       <div className="project flex flex-col relative bg-[#222] justify-start items-center">
         <Image
-          className={`rounded-tl-xl rounded-tr-xl transition duration-500 filter ${isHovered ? 'blur-0' : 'blur-sm'} object-cover`}
-          src={props.image}
+className={`w-full h-full rounded-tl-xl rounded-tr-xl transition duration-500 filter ${isHovered ? 'blur-0' : 'blur-sm'} object-cover`}          src={props.image}
           alt={props.title}
           height={300}
         />

@@ -105,7 +105,7 @@ export default function Navbar() {
   return (
     <div className="navbar-container transition duration-500 flex justify-center fixed w-full top-0 z-50 pb-4 items-center mb-4">
       <div className="navbar rounded-2xl w-[6%] duration-500 flex justify-between items-center p-4 ">
-        <h1 className="name-header z-50 font-cursive whitespace-nowrap absolute text-bold text-4xl cursor-pointer">Ansuman Sharma</h1>
+        <h1 className="name-header z-50 font-cursive whitespace-nowrap absolute text-bold text-4xl">Ansuman Sharma</h1>
         <div className="links opacity-0 flex ml-auto">
           <p onClick = {() => {handleAbout()}} className="link font-dmsans mx-[20px]   cursor-pointer hover:text-[#2e70db] duration-100">About</p>
           <p onClick = {() => {handleClick('.experience-section')}} className="link font-dmsans mx-[20px]   cursor-pointer hover:text-[#2e70db] duration-100">Experience</p>
