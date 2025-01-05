@@ -12,6 +12,10 @@ export default function Project(props) {
     setIsHovered(false);
   };
 
+  const handleClick = (link) => {
+    window.open(link, '_blank');
+  }
+
   return (
     <div
       className="flex flex-col justify-start hover:scale-[1.05] duration-500 rounded-xl shadow-custom-dark bg-[#0f2027] overflow-hidden items-center  m-4 max-w-[30vw]"
@@ -25,7 +29,7 @@ export default function Project(props) {
           alt={props.title}
           height={300}
         />
-        <h1 className="project-title py-2 absolute top-[0%] rounded-tr-xl rounded-tl-xl w-full text-center font-inter font-semibold text-white text-4xl">
+        <h1 className="project-title py-2 absolute top-[0%] rounded-tr-xl rounded-tl-xl w-full text-center font-inter  text-white text-4xl">
           {props.title}
         </h1>
       </div>
@@ -42,10 +46,10 @@ export default function Project(props) {
         {props.description}
       </p>
       <div className={`flex flex-row justify-center items-baseline mt-4 w-full ease-in-out duration-500 ${isHovered ? 'max-h-[50px] overflow-hidden opacity-1' : 'opacity-0 max-h-0'}`}>
-        <button className="bg-[#2e70db] mx-2 hover:bg-[#1e60cb] duration-200 p-4 h-[20px] flex justify-center items-center font-dmsans rounded-full">
+        <button onClick = {() => {handleClick(props.github)}} className="bg-[#2e70db] mx-2 hover:bg-[#1e60cb] duration-200 p-4 h-[20px] flex justify-center items-center font-dmsans rounded-full">
           Github
         </button>
-        <button className="bg-[#2e70db] mx-2 hover:bg-[#1e60cb] duration-200 p-4 h-[20px] flex justify-center items-center font-dmsans rounded-full">
+        <button onClick = {() => {handleClick(props.devpost)}} className="bg-[#2e70db] mx-2 hover:bg-[#1e60cb] duration-200 p-4 h-[20px] flex justify-center items-center font-dmsans rounded-full">
           Devpost  
         </button>
       </div>

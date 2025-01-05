@@ -34,7 +34,7 @@ export default function Job(props) {
           </svg>
         </div>
         <h2 className='font-inter font-regular text-3xl mb-2'>{props.company}</h2>
-        <div className={`transition-all duration-700 ease-in-out overflow-hidden ${isVisible ? 'max-h-screen opacity-100' : 'max-h-0 opacity-0'}`}>
+        <div className={`transition-all duration-1000 ease-in-out overflow-hidden ${isVisible ? 'max-h-[500px] opacity-100' : 'max-h-0 opacity-0'}`}>
           <p className='font-dmsans font-light text-lg'>{props.date}</p>
           <p className='font-dmsans font-light text-lg mb-2'>{props.location}</p>
           <div className='flex flex-row flex-wrap'>

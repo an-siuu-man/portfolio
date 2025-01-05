@@ -64,18 +64,12 @@ export default function About() {
     const handleScroll = () => {
       const downArrow = document.querySelector('.down-arrow');
       if (window.scrollY === 0) {
-        downArrow.style.opacity = '1';
-        setTimeout(() => {
-          downArrow.style.strokeWidth = '1';
-        }, 600);
+        downArrow.style.strokeWidth = '1';
+
       } else {
-        downArrow.style.opacity = '0';
-        setTimeout(() => {
-          downArrow.style.strokeWidth = '0';
-        }, 600);
+        downArrow.style.strokeWidth = '0';
       }
     };
-
     window.addEventListener('resize', handleResize);
     window.addEventListener('scroll', handleScroll);
 
@@ -133,7 +127,7 @@ export default function About() {
       </div>
       <svg
         onClick={handleClick}
-        className="fixed bottom-0 left-1/2 transform -translate-x-1/2 mb-4"
+        className="fixed bottom-0 left-1/2 cursor-pointer transform -translate-x-1/2 mb-4"
         width="100px"
         height="100px"
         viewBox="0 0 24 24"
