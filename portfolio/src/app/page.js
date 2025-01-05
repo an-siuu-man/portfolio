@@ -24,7 +24,7 @@ export default function Home() {
 
 
   return (
-    <div className=" w-full">
+    <div className="flex flex-col w-full">
       {/* <div style={backgroundImage}></div> */}
 
       <Navbar />

@@ -38,10 +38,17 @@ export default function Navbar() {
       if (window.scrollY === 0) {
         navbar.style.width = '90%';
         navbarContainer.style.backgroundColor = 'transparent';
+        navbar.style.color = '';
+        navbar.style.transform = 'translateY(0)';
+        navbar.style.backgroundColor = 'transparent';
+
       } else {
+        navbarContainer.style.backdropFilter = 'blur(40px)';
+        navbar.style.backdropFilter = 'blur(40px)';
+        navbar.style.color = '#fff';
+        navbar.style.transform = 'translateY(20px)';
         navbar.style.width = '80%';
-        navbarContainer.style.backgroundColor = '#171717';
-        navbarContainer.style.fontColor = 'white';
+        navbar.style.backgroundColor = 'rgba(15, 32, 39, 0.7)';
       }
     };
 
@@ -84,23 +91,26 @@ export default function Navbar() {
   function handleClick(ClassName) {
     const section = document.querySelector(ClassName);
     if (section) {
-      section.scrollIntoView({ behavior: 'smooth' });
-      setTimeout(() => {
-        window.scrollBy(0, -250); // Adjust the value (-75) to scroll a few pixels above the div
-      }, 500); // Adjust the timeout duration if necessary
+      // Scroll to the bottom of the specified div plus 20vh
+      const additionalScroll = window.innerHeight * 0.2; // 20vh
+      const targetScrollTop = section.scrollHeight - section.clientHeight -  additionalScroll;
+      window.scrollTo({
+        top: section.offsetTop + targetScrollTop,
+        behavior: 'smooth'
+      });
     }
   }
 
 
   return (
-    <div className="navbar-container transition duration-500 flex justify-center sticky top-0 z-50 pb-4 bg-[#2d2d2d] items-center mb-4">
-      <div className="navbar w-[6%] flex justify-between items-center mt-4">
+    <div className="navbar-container transition duration-500 flex justify-center fixed w-full top-0 z-50 pb-4 items-center mb-4">
+      <div className="navbar rounded-2xl w-[6%] duration-500 flex justify-between items-center p-4 ">
         <h1 className="name-header z-50 font-cursive whitespace-nowrap absolute text-bold text-4xl cursor-pointer">Ansuman Sharma</h1>
         <div className="links opacity-0 flex ml-auto">
-          <p onClick = {() => {handleAbout()}} className="link font-dmsans mx-[20px] cursor-pointer hover:text-[#2e70db] duration-100">About</p>
-          <p onClick = {() => {handleClick('.experience')}} className="link font-dmsans mx-[20px] cursor-pointer hover:text-[#2e70db] duration-100">Experience</p>
-          <p onClick = {() => {handleClick('.projects')}} className="link font-dmsans mx-[20px] cursor-pointer hover:text-[#2e70db] duration-100">Projects</p>
-          <p onClick = {() => {handleClick('.contact')}} className="link font-dmsans mx-[20px] cursor-pointer hover:text-[#2e70db] duration-100">Contact</p>
+          <p onClick = {() => {handleAbout()}} className="link font-dmsans mx-[20px]   cursor-pointer hover:text-[#2e70db] duration-100">About</p>
+          <p onClick = {() => {handleClick('.experience-section')}} className="link font-dmsans mx-[20px]   cursor-pointer hover:text-[#2e70db] duration-100">Experience</p>
+          <p onClick = {() => {handleClick('.projects-section')}} className="link font-dmsans mx-[20px]   cursor-pointer hover:text-[#2e70db] duration-100">Projects</p>
+          <p onClick = {() => {handleClick('.contact-section')}} className="link font-dmsans mx-[20px]   cursor-pointer hover:text-[#2e70db] duration-100">Contact</p>
         </div>
         <button className="block md:hidden ml-auto" onClick={toggleDropdown}>
           ☰

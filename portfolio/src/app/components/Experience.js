@@ -1,9 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import Job from './Job';
 
-
-
-
 export default function Experience() {
   const experienceRef = useRef(null);
 
@@ -11,17 +8,19 @@ export default function Experience() {
     const handleIntersection = (entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
+          if (entry.target.style.opacity !== '1') {
             entry.target.style.opacity = '1';
-            entry.target.style.transform = 'translateY(0)';
+          }
         } else {
+          if (entry.target.style.opacity !== '0') {
             entry.target.style.opacity = '0';
-            entry.target.style.transform = 'translateY(200px)';
+          }
         }
       });
     };
 
     const observer = new IntersectionObserver(handleIntersection, {
-      threshold: 0.1
+      threshold: 0.7
     });
 
     if (experienceRef.current) {
@@ -36,10 +35,12 @@ export default function Experience() {
   }, []);
 
   return (
-    <div className="flex flex-col justify-center items-center my-[25vh] h-[50vh] overflow-hidden">
+    <div
+      ref={experienceRef}
+      className="experience-section flex flex-col transition duration-1000 justify-start items-stretch h-full opacity-0"
+    >
       <div
-        ref={experienceRef}
-        className="experience translate-y-[200px] w-full transition duration-1000 flex px-20 flex-row items-stretch opacity-0"
+        className="experience  w-full flex px-20 flex-row items-stretch "
       >
         <div className='left w-[50%] flex flex-col border-[transparent] border-r-[#2e70db] border-r-2 justify-start items-center'>
           <h1 className="font-inter font-semibold text-6xl">Experience</h1>

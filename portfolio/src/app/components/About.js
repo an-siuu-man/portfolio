@@ -10,16 +10,14 @@ export default function About() {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           entry.target.style.opacity = '1';
-          entry.target.style.transform = 'translateY(0)';
         } else {
           entry.target.style.opacity = '0';
-          entry.target.style.transform = 'translateY(200px)';
         }
       });
     };
 
     const observer = new IntersectionObserver(handleIntersection, {
-      threshold: 0.4
+      threshold: 0.5
     });
 
     if (aboutRef.current) {
@@ -88,17 +86,20 @@ export default function About() {
   }, []);
 
   function handleClick() {
-    const experienceSection = document.querySelector('.experience');
-    if (experienceSection) {
-      experienceSection.scrollIntoView({ behavior: 'smooth' });
-      setTimeout(() => {
-        window.scrollBy(0, -250); // Adjust the value (-75) to scroll a few pixels above the div
-      }, 500); // Adjust the timeout duration if necessary
+    const section = document.querySelector('.experience-section');
+    if (section) {
+      // Scroll to the bottom of the specified div plus 20vh
+      const additionalScroll = window.innerHeight * 0.2; // 20vh
+      const targetScrollTop = section.scrollHeight - section.clientHeight -  additionalScroll;
+      window.scrollTo({
+        top: section.offsetTop + targetScrollTop,
+        behavior: 'smooth'
+      });
     }
   }
 
   return (
-    <div className="flex flex-col  justify-start items-center mt-[20vh] h-full overflow-hidden">
+    <div className="about-section flex flex-col justify-start items-center my-[20vh] h-full overflow-hidden">
       <div ref={aboutRef} className="about transition duration-700 opacity-0 flex flex-row items-stretch justify-start px-20">
         <div className='left w-[50%] flex flex-col border-[transparent] border-r-[#2e70db] border-r-2 transition duration-700 translate-y-[200px] items-center justify-start'>
           <div className="photo-container">

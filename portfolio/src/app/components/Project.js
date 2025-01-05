@@ -14,13 +14,13 @@ export default function Project(props) {
 
   return (
     <div
-      className="flex flex-col justify-start rounded-xl overflow-hidden items-center m-4 max-w-[30vw]"
+      className="flex flex-col justify-start hover:scale-[1.05] duration-500 rounded-xl shadow-custom-dark bg-[#0f2027] overflow-hidden items-center  m-4 max-w-[30vw]"
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
-      <div className="project flex flex-col relative justify-start items-center">
+      <div className="project flex flex-col relative bg-[#222] justify-start items-center">
         <Image
-          className={`rounded-tl-xl rounded-tr-xl transition duration-200 filter ${isHovered ? 'blur-0' : 'blur-sm'} w-[100%] `}
+          className={`rounded-tl-xl rounded-tr-xl transition duration-500 filter ${isHovered ? 'blur-0' : 'blur-sm'} object-cover`}
           src={props.image}
           alt={props.title}
           height={300}
@@ -30,18 +30,18 @@ export default function Project(props) {
         </h1>
       </div>
 
-      <div className="flex flex-col text-center text-[#ddd] min-h-[150px] items-center bg-[#222] p-4 rounded-bl-xl rounded-br-xl">
-      <div className="flex flex-row justify-center items-center ">
+      <div className="flex flex-col text-center text-[#ddd] w-full h-full z-5 items-center bg-[#1f3037] p-4 rounded-bl-xl rounded-br-xl">
+      <div className="flex flex-row flex-wrap justify-center items-center w-full">
         {
           props.skills.map((skill, index) => (
             <Skill key={index} skill={skill} />
           ))
         }
       </div>
-        <p className="font-dmsans text-lg">
-          {props.description}
-        </p>
-      <div className={`flex flex-row justify-center items-baseline mt-4 w-full duration-700 ${isHovered ? 'max-h-screen opacity-1' : 'max-h-0 opacity-0'}`}>
+      <p className="font-dmsans text-lg">
+        {props.description}
+      </p>
+      <div className={`flex flex-row justify-center items-baseline mt-4 w-full ease-in-out duration-500 ${isHovered ? 'max-h-[50px] overflow-hidden opacity-1' : 'opacity-0 max-h-0'}`}>
         <button className="bg-[#2e70db] mx-2 hover:bg-[#1e60cb] duration-200 p-4 h-[20px] flex justify-center items-center font-dmsans rounded-full">
           Github
         </button>
@@ -49,7 +49,7 @@ export default function Project(props) {
           Devpost  
         </button>
       </div>
-      </div>
+    </div>
 
     </div>
   );
