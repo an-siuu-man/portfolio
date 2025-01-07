@@ -18,13 +18,14 @@ export default function Project(props) {
 
   return (
     <div
-      className="flex flex-col justify-start hover:scale-[1.05] duration-500 rounded-xl shadow-custom-dark bg-[#0f2027] overflow-hidden items-center  m-4 max-w-[30vw]"
+      className="project-container flex flex-col justify-start hover:scale-[1.05] duration-500 rounded-xl shadow-custom-dark bg-[#0f2027] overflow-hidden items-center  m-4 max-w-[30vw]"
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
       <div className="project flex flex-col relative bg-[#222] justify-start items-center">
         <Image
-className={`w-full h-full rounded-tl-xl rounded-tr-xl transition duration-500 filter ${isHovered ? 'blur-0' : 'blur-sm'} object-cover`}          src={props.image}
+          className={`w-full h-full rounded-tl-xl rounded-tr-xl transition duration-500 filter ${isHovered ? 'blur-0' : 'blur-sm'} object-cover`}          
+          src={props.image}
           alt={props.title}
           height={300}
         />

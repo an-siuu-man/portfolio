@@ -42,10 +42,10 @@ export default function Experience() {
       <div
         className="experience  w-full flex px-20 flex-row items-stretch "
       >
-        <div className='left w-[50%] flex flex-col border-[transparent] border-r-[#2e70db] border-r-2 justify-start items-center'>
+        <div className='experience-left w-[50%] flex flex-col border-[transparent] border-r-[#2e70db] border-r-2 justify-start items-center'>
           <h1 className="font-inter font-semibold text-6xl">Experience</h1>
         </div>
-        <div className='right w-[50%] flex flex-col p-4 transition duration-700 '>
+        <div className='experience-right w-[50%] flex flex-col p-4 transition duration-700 '>
             <Job title  = 'Software Engineer Intern' margin= 'mb-5' company = 'Ascend Learning LLC' date = 'November 2024 - Present' location = 'Hybrid - Overland Park, KS' skills = {['.NET Core', 'SQL Server']} description = 'Utilizing C# .NET Core to develop API infrastructure for a new Faculty Course Enablement Portal in the Learning Management System. Collaborating within an agile team environment by participating in daily stand-ups, sprint planning, and iterative development cycles.'/>
             <Job title = 'Enterprise Success Intern' margin= 'mt-5' company = 'UiPath Inc.' date = 'June 2024 - August 2024' location = 'Bellevue, WA' skills = {['.NET Core', 'SQL Server', 'Python', 'UiPath Apps']} description = 'Developed a centralized comprehensive repository to help users access hundreds of production-implemented use cases, business challenges, and case studies for enterprise-level clients. Designed efficient automation workflows to automatically generate comprehensive PowerPoints with the use case data within seconds. Reduced product use case research time for Technical Account Managers at the company by over 95%.' />
         </div>

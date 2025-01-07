@@ -33,8 +33,8 @@ export default function About() {
 
   useEffect(() => {
     const about = document.querySelector('.about');
-    const right = document.querySelector('.right');
-    const left = document.querySelector('.left');
+    const right = document.querySelector('.about-right');
+    const left = document.querySelector('.about-left');
     const image = document.querySelector('.self-image');
     const downArrow = document.querySelector('.down-arrow');
 
@@ -95,7 +95,7 @@ export default function About() {
   return (
     <div className="about-section flex flex-col justify-start items-center my-[20vh] h-[60vh] overflow-hidden">
       <div ref={aboutRef} className="about transition duration-700 opacity-0 flex flex-row items-stretch justify-start px-20">
-        <div className='left w-[50%] flex flex-col border-[transparent] border-r-[#2e70db] border-r-2 transition duration-700 translate-y-[200px] items-center justify-start'>
+        <div className='about-left w-[50%] flex flex-col border-[transparent] border-r-[#2e70db] border-r-2 transition duration-700 translate-y-[200px] items-center justify-start'>
           <div className="photo-container">
             <Image
               className='self-image opacity-0 transition duration-700 translate-y-[300px] h-[300px] w-[300px] object-cover rounded-[50%]'
@@ -110,7 +110,7 @@ export default function About() {
             University of Kansas
           </p>
         </div>
-        <div className='right opacity-0 w-[50%] p-4 transition duration-700 translate-x-[200px]'>
+        <div className='about-right opacity-0 w-[50%] p-4 transition duration-700 translate-x-[200px]'>
           <h1 className='font-inter font-semibold text-4xl'>
             Hey there, visitor!
           </h1>
