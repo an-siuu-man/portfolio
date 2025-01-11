@@ -13,14 +13,17 @@ export default function Home() {
 
 
   return (
-    <div className="flex flex-col w-full">
+    <div className="flex flex-col items-center ">
+      <Navbar />
+      <div className="w-[80%]">
       {/* <div style={backgroundImage}></div> */}
 
-      <Navbar />
-      <About />
-      <Experience />
-      <Projects />
-      <Skills />
+
+        <About />
+        <Experience />
+        <Projects />
+        <Skills />
+      </div>
     </div>
   );
 }

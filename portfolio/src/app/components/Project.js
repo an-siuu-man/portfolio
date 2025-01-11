@@ -29,7 +29,7 @@ export default function Project(props) {
           alt={props.title}
           height={300}
         />
-        <h1 className="project-title py-2 absolute top-[0%] rounded-tr-xl rounded-tl-xl w-full text-center font-inter  text-white text-4xl">
+        <h1 className="project-title py-2 absolute top-[0%] rounded-tr-xl rounded-tl-xl w-full text-center font-inter font-semibold text-white text-4xl">
           {props.title}
         </h1>
       </div>
