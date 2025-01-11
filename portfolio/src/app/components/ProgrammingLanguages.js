@@ -21,7 +21,7 @@ export default function ProgrammingLanguages () {
 
 
     return (
-        <div className="flex flex-col justify-start w-full">
+        <div className="flex flex-col justify-start w-full mb-5">
         <div
             onClick={handleClick} 
             className='flex flex-row justify-between items-center cursor-pointer mb-5'>
@@ -44,7 +44,7 @@ export default function ProgrammingLanguages () {
             />
           </svg>
         </div>
-        <div className={`transition-all duration-500 ease-in-out grid grid-cols-3 gap-4 overflow-hidden justify-items-center items-start ${isVisible ? 'max-h-[500px] opacity-100' : 'max-h-0 opacity-0'}`}>
+        <div className={`transition-all duration-700 ease-in-out grid grid-cols-3 gap-4 overflow-hidden justify-items-center items-start ${isVisible ? 'max-h-[500px] opacity-100' : 'max-h-0 opacity-0'}`}>
         <div className="min-h-[80px]"><PythonIcon /></div>
             <div className="min-h-[80px]"><JsIcon /></div>
             <div className="min-h-[80px]"><CsharpIcon /></div>

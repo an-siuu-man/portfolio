@@ -9,13 +9,42 @@ export default function Navbar() {
   useEffect(() => {
     const navbar = document.querySelector('.navbar');
     const links = document.querySelector('.links');
+    const navbarContainer = document.querySelector('.navbar-container');
 
     const handleResize = () => {
       if (window.innerWidth < 768) {
-        navbar.style.width = '90%';
+        if (window.scrollY === 0) {
+          navbar.style.width = '90%';
+          navbarContainer.style.backgroundColor = 'transparent';
+          navbar.style.color = '';
+          navbar.style.transform = 'translateY(0)';
+          navbar.style.backgroundColor = 'transparent';
+  
+        } else {
+          navbarContainer.style.backdropFilter = 'blur(40px)';
+          navbar.style.backdropFilter = 'blur(40px)';
+          navbar.style.color = '#fff';
+          navbar.style.transform = 'translateY(20px)';
+          navbar.style.width = '80%';
+          navbar.style.backgroundColor = 'rgba(15, 32, 39, 0.7)';
+        }
         links.style.display = 'none';
       } else {
-        navbar.style.width = '90%';
+        if (window.scrollY === 0) {
+          navbar.style.width = '90%';
+          navbarContainer.style.backgroundColor = 'transparent';
+          navbar.style.color = '';
+          navbar.style.transform = 'translateY(0)';
+          navbar.style.backgroundColor = 'transparent';
+  
+        } else {
+          navbarContainer.style.backdropFilter = 'blur(40px)';
+          navbar.style.backdropFilter = 'blur(40px)';
+          navbar.style.color = '#fff';
+          navbar.style.transform = 'translateY(20px)';
+          navbar.style.width = '80%';
+          navbar.style.backgroundColor = 'rgba(15, 32, 39, 0.7)';
+        }
         links.style.display = 'flex';
         setIsDropdownOpen(false);
       }
@@ -34,7 +63,6 @@ export default function Navbar() {
     }
 
     const handleScroll = () => {
-      const navbarContainer = document.querySelector('.navbar-container');
       if (window.scrollY === 0) {
         navbar.style.width = '90%';
         navbarContainer.style.backgroundColor = 'transparent';

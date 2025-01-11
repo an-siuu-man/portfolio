@@ -57,12 +57,17 @@ export default function About() {
         right.style.transform = 'translateX(0)';
         right.style.opacity = '1';
         downArrow.style.opacity = '1';
+        if (window.scrollY === 0) {
+          downArrow.style.strokeWidth = '1';
+  
+        } else {
+          downArrow.style.strokeWidth = '0';
+        }
         handleResize();
       }, 300);
     }
 
     const handleScroll = () => {
-      const downArrow = document.querySelector('.down-arrow');
       if (window.scrollY === 0) {
         downArrow.style.strokeWidth = '1';
 
@@ -93,7 +98,7 @@ export default function About() {
   }
 
   return (
-    <div className="about-section flex flex-col justify-start items-center my-[20vh] h-[60vh] overflow-hidden">
+    <div className="about-section flex flex-col justify-start items-center mt-[20vh] mb-[40vh] overflow-hidden">
       <div ref={aboutRef} className="about transition duration-700 opacity-0 flex flex-row items-stretch justify-start px-20">
         <div className='about-left w-[50%] flex flex-col border-[transparent] border-r-[#2e70db] border-r-2 transition duration-700 translate-y-[200px] items-center justify-start'>
           <div className="photo-container">

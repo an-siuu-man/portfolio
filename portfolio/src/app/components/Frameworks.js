@@ -1,10 +1,13 @@
 import React, { useState } from 'react';
-import PythonIcon from './PythonIcon';
-import JsIcon from './JsIcon';
-import CsharpIcon from './CsharpIcon';
-import CppIcon from './CppIcon';
-import TailwindCSSIcon from './TailwindCSSIcon';
-import SqlIcon from './SqlIcon';
+import ReactIcon from './ReactIcon';
+import NextIcon from './NextIcon';
+import DjangoIcon from './DjangoIcon';
+import DotnetIcon from './DotnetIcon';
+import GitIcon from './GitIcon';
+import NodeIcon from './NodeIcon';
+
+
+
 
 export default function Frameworks() {
   const [isVisible, setIsVisible] = useState(false);
@@ -19,7 +22,7 @@ export default function Frameworks() {
         onClick={handleClick}
         className='flex flex-row justify-between items-center cursor-pointer mb-5'
       >
-        <h1 className={`${isVisible ? 'text-[#2e70db]' : ''} font-inter hover:text-[#2e70db] duration-200 font-semibold text-4xl`}>Frameworks</h1>
+        <h1 className={`${isVisible ? 'text-[#2e70db]' : ''} font-inter hover:text-[#2e70db] duration-200 font-semibold text-4xl`}>Frameworks and Tools</h1>
         <svg
           className={`transition-transform duration-500 ease-in-out ${isVisible ? 'rotate-180' : 'rotate-0'}`}
           width="50px"
@@ -38,13 +41,13 @@ export default function Frameworks() {
           />
         </svg>
       </div>
-      <div className={`transition-all duration-500 ease-in-out grid grid-cols-3 gap-4 overflow-hidden justify-items-center items-start ${isVisible ? 'max-h-[500px] opacity-100' : 'max-h-0 opacity-0'}`}>
-      <div className="min-h-[80px]"><PythonIcon /></div>
-            <div className="min-h-[80px]"><JsIcon /></div>
-            <div className="min-h-[80px]"><CsharpIcon /></div>
-            <div className="min-h-[80px]"><CppIcon /></div>
-            <div className="min-h-[80px]"><TailwindCSSIcon /></div>
-            <div className="min-h-[80px]"><SqlIcon /></div>
+      <div className={`transition-all duration-700 ease-in-out grid grid-cols-3 gap-4 overflow-hidden justify-items-center items-start ${isVisible ? 'max-h-[500px] opacity-100' : 'max-h-0 opacity-0'}`}>
+        <div className="min-h-[80px]"><ReactIcon /></div>
+        <div className="min-h-[80px]"><NextIcon /></div>
+        <div className="min-h-[80px]"><DotnetIcon /></div>
+        <div className="min-h-[80px]"><DjangoIcon /></div>
+        <div className="min-h-[80px]"><NodeIcon /></div>
+        <div className="min-h-[80px]"><GitIcon /></div>
       </div>
     </div>
   );
