@@ -1,6 +1,8 @@
 import { useEffect, useRef } from "react";
 import PythonIcon from "./PythonIcon";
 import JsIcon from "./JsIcon";
+import ProgrammingLanguages from "./ProgrammingLanguages";
+import Frameworks from "./Frameworks";
 
 export default function Skills() {
 
@@ -43,9 +45,11 @@ export default function Skills() {
                     Following are the skills that I have accumulated through my internship experience as well as personal projects.
                     My skills are primarily focused on web development on both frontend as well as backend sides.
                 </p>
-                <div className="skills-icons flex flex-row justify-start items-center mt-4">
-                    <PythonIcon />
-                    <JsIcon />
+                <div className="skills-icons flex flex-col justify-start items-start mt-4">
+                    {/* <PythonIcon />
+                    <JsIcon /> */}
+                    <ProgrammingLanguages />
+                    <Frameworks />
                 </div>
                 </div>
             </div>

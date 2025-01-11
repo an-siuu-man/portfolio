@@ -121,7 +121,7 @@ export default function About() {
             I like to develop innovative software solutions to solve real world problems with my proficiency in languages such as Python, JavaScript, C#, etc. and frameworks such as React, Next, .NET, Django, etc.
           </p>
           <p className='font-dmsans text-lg py-4'>
-            In my free time you can find me playing soccer, doing calligraphy, or watching action comedy movies. Feel free to reach out to me for any queries, movie recommendations, or just to say hi!
+            In my free time you can find me playing soccer, doing calligraphy, or watching action comedy movies. Let's connect! I'm always up for movie talk, answering your burning questions, or simply a friendly hello.
           </p>
         </div>
       </div>

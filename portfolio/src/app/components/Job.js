@@ -10,7 +10,7 @@ export default function Job(props) {
 
   return (
     <div className={`${props.margin}`}>
-      <div className='job flex flex-col justify-center items-left '>
+      <div className='job flex flex-col justify-center'>
         <div
             onClick={handleClick} 
             className='flex flex-row justify-between items-center cursor-pointer'>
