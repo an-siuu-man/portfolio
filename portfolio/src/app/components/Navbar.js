@@ -147,8 +147,8 @@ export default function Navbar() {
         {isDropdownOpen && (
           <div ref={dropdownRef} className="dropdown-menu absolute top-full right-0 rounded-xl bg-[#333] py-4 shadow-lg">
             <p onClick = {() => {handleAbout()}} className="link font-dmsans mx-[20px] cursor-pointer hover:text-[#2e70db] duration-100">About</p>
-            <p onClick = {() => {handleClick('.experience')}} className="link font-dmsans mx-[20px] cursor-pointer hover:text-[#2e70db] duration-100">Experience</p>
-            <p onClick = {() => {handleClick('.projects')}} className="link font-dmsans mx-[20px] cursor-pointer hover:text-[#2e70db] duration-100">Projects</p>
+            <p onClick = {() => {handleClick('.experience-section')}} className="link font-dmsans mx-[20px] cursor-pointer hover:text-[#2e70db] duration-100">Experience</p>
+            <p onClick = {() => {handleClick('.projects-section')}} className="link font-dmsans mx-[20px] cursor-pointer hover:text-[#2e70db] duration-100">Projects</p>
             <p onClick = {() => {handleClick('.skills-section')}} className="link font-dmsans mx-[20px]   cursor-pointer hover:text-[#2e70db] duration-100">Skills</p>
             <p onClick = {() => {handleClick('.contact-section')}} className="link font-dmsans mx-[20px] cursor-pointer z-20 hover:text-[#2e70db] duration-100">Contact</p>
           </div>

@@ -17,7 +17,7 @@ export default function About() {
     };
 
     const observer = new IntersectionObserver(handleIntersection, {
-      threshold: 0.5
+      threshold: 0.3
     });
 
     if (aboutRef.current) {
@@ -42,9 +42,15 @@ export default function About() {
       if (window.innerWidth < 768) {
         about.style.flexDirection = 'column';
         left.style.borderRightColor = 'transparent';
+        left.style.width = '100%';
+        right.style.width = '100%';
+        image.style.width = '80%';
       } else {
         about.style.flexDirection = 'row';
         left.style.borderRightColor = '';
+        left.style.width = '50%';
+        right.style.width = '50%';
+        image.style.width = '';
       }
     };
 

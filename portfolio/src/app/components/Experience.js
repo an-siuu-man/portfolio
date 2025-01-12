@@ -20,7 +20,7 @@ export default function Experience() {
     };
 
     const observer = new IntersectionObserver(handleIntersection, {
-      threshold: 0.7
+      threshold: 0.6
     });
 
     if (experienceRef.current) {
