@@ -35,7 +35,7 @@ export default function Skills() {
     }, []);
 
     return (
-        <div ref={skillsRef} className="skills-section flex flex-col justify-start items-center transition duration-1000 opacity-0 ">
+        <div ref={skillsRef} className="skills-section flex flex-col justify-start items-center transition duration-1000 my-[20vh] opacity-0 ">
             <div className="skills flex flex-row w-full px-20 items-stretch">
                 <div className="skills-left w-[50%] flex flex-col border-[transparent] border-r-[#2e70db] border-r-2 justify-start items-center">
                     <h1 className="font-inter font-semibold text-6xl">Skills</h1>

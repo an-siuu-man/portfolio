@@ -24,7 +24,7 @@ export default function ReactIcon() {
                     </g>
                 </svg>
             </div>
-            <p className={`font-dmsans font-light text-lg ${isHovered ? 'opacity-1' : 'opacity-0'} duration-300`}>React/React Native</p>
+            <p className={`font-dmsans font-light text-md whitespace-normal ${isHovered ? 'opacity-1' : 'opacity-0'} duration-300`}>React/React Native</p>
         </div>
     );
 }

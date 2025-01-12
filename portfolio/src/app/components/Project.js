@@ -34,7 +34,7 @@ export default function Project(props) {
         </h1>
       </div>
 
-      <div className="flex flex-col text-center text-[#ddd] w-full h-full z-5 items-center bg-[#1f3037] p-4 rounded-bl-xl rounded-br-xl">
+      <div className="flex flex-col text-center text-[#ddd] w-full h-full z-5 items-center justify-start bg-[#1f3037] p-4 rounded-bl-xl rounded-br-xl">
       <div className="flex flex-row flex-wrap justify-center items-center w-full">
         {
           props.skills.map((skill, index) => (

@@ -120,13 +120,19 @@ export default function About() {
             Hey there, visitor!
           </h1>
           <p className='font-dmsans text-lg py-4'>
-            I am a third year student at the University of Kansas pursuing Computer Science and a minor in Mathematics with strong programming and mathematics skills.
+            I am a third year student at the University of Kansas pursuing Computer Science 
+            and a minor in Mathematics with strong programming and mathematics skills.
           </p>
           <p className='font-dmsans text-lg py-4'>
-            I like to develop innovative software solutions to solve real world problems with my proficiency in languages such as Python, JavaScript, C#, etc. and frameworks such as React, Next, .NET, Django, etc.
+            I like to develop innovative software solutions to solve real world problems 
+            with my proficiency in various programming languages and frameworks. 
+            I intend to pursue a career in software development and am currently seeking 
+            internship opportunities for Summer 2025.
           </p>
           <p className='font-dmsans text-lg py-4'>
-            In my free time you can find me playing soccer, doing calligraphy, or watching action comedy movies. Let's connect! I'm always up for movie talk, answering your burning questions, or simply a friendly hello.
+            In my free time you can find me playing soccer, doing calligraphy, 
+            or watching action comedy movies. Let's connect! I'm always up for
+             movie talk, answering your burning questions, or simply a friendly hello.
           </p>
         </div>
       </div>
