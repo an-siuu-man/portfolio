@@ -1,5 +1,8 @@
 import { useEffect, useRef } from "react";
-
+import GithubLink from "./GithubLink";
+import LinkedinLink from "./LinkedinLink";
+import GmailLink from "./GmailLink";
+import InstagramLink from "./InstagramLink";
 export default function Contact() {
   const contactRef = useRef(null);
 
@@ -37,10 +40,21 @@ return (
             </div>
             <div className="contact-right w-[50%] flex flex-col p-4 transition duration-700">
                 <p className="font-dmsans text-lg">
-                    If you would like to get in touch with me, please feel free to reach out to me via email or LinkedIn.
+                    If you would like to get in touch, please feel free to reach out and connect with me via any of the following platforms.
                 </p>
-                <div className="contact-icons flex flex-col justify-start items-start mt-4">
-                    Hello
+                <div className="contact-icons grid grid-cols-4 justify-between items-start mt-4">
+                  <div className="github-link min-h-[80px]">
+                    <GithubLink />
+                  </div>
+                  <div className="linkedin-link min-h-[80px]">
+                    <LinkedinLink />
+                  </div>
+                  <div className="gmail-link min-h-[80px]">
+                    <GmailLink />
+                  </div>  
+                  <div className="instagram-link min-h-[80px]">
+                    <InstagramLink />
+                  </div>
                 </div>
             </div>
         </div>

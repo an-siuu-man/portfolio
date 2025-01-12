@@ -64,6 +64,7 @@ export default function Projects() {
                     <Project image={project3} github="https://github.com/an-siuu-man/geogo" devpost="https://devpost.com/software/geogo" skills={['Django', 'Flask', 'SerpAPI', 'Gemini']} title='Geogo' description='To make tourism easier, me and three of my peers developed this app to provide users with visa requirements, flight itineraries, popular tourist spots, and potential daily costs of traveling to any city with an international airport.' />
                     <Project image={project4} github="https://github.com/manees-singh/NeoPyramid" devpost='https://devpost.com/software/servo-tower' skills={['C/C++', "Arduino", 'Raspberry Pi']} title='NeoPyramid' description='This project is a mechanical rubber-band shooting turret with a rotating barrel that can detect foreign objects and shoot accurately at them at distances more than 25ft.' />
                 </div>
+                <p className='font-dmsans text-xl my-10'>More coming soon!</p>
             </div>
         </div>
     );

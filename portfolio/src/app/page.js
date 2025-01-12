@@ -26,9 +26,9 @@ export default function Home() {
         polygonText.style.opacity = '0';
         setTimeout(() => {
         setIsAnimationComplete(true);
-        Body.style.overflowY = 'scroll';
+        Body.style.overflowY = 'unset';
         }, 500);
-      }, 2500); // Match this duration with the animation duration
+      }, 2000); // Match this duration with the animation duration
     }
 
   }, []);

@@ -97,6 +97,21 @@ export default function About() {
     }
   }
 
+
+  function handleLinkClick(ClassName) {
+    const section = document.querySelector(ClassName);
+    if (section) {
+      // Scroll to the bottom of the specified div plus 20vh
+      const additionalScroll = window.innerHeight * 0.2; // 20vh
+      const targetScrollTop = section.scrollHeight - section.clientHeight -  additionalScroll;
+      window.scrollTo({
+        top: section.offsetTop + targetScrollTop,
+        behavior: 'smooth'
+      });
+    }
+  }
+
+
   return (
     <div className="about-section flex flex-col justify-start items-center mt-[20vh] mb-[40vh] overflow-hidden">
       <div ref={aboutRef} className="about transition duration-700 opacity-0 flex flex-row items-stretch justify-start px-20">
@@ -120,18 +135,25 @@ export default function About() {
             Hey there, visitor!
           </h1>
           <p className='font-dmsans text-lg py-4'>
-            I am a third year student at the University of Kansas pursuing Computer Science 
-            and a minor in Mathematics with strong programming and mathematics skills.
+            I am a third year student at the <span className='text-white cursor-pointer hover:border-b-white border-b-transparent border-b-2 transition duration-300' onClick={() => {
+            window.open('https://www.ku.edu/', '_blank');
+            }}>University of Kansas</span> pursuing Computer Science 
+            and a minor in Mathematics with an expected graduation of May 2026.
           </p>
           <p className='font-dmsans text-lg py-4'>
             I like to develop innovative software solutions to solve real world problems 
-            with my proficiency in various programming languages and frameworks. 
-            I intend to pursue a career in software development and am currently seeking 
+            with my proficiency in <span className='text-white cursor-pointer hover:border-b-white border-b-transparent border-b-2 transition duration-300' onClick={() => {
+            handleLinkClick('.skills-section');
+            }}>
+            various programming languages and frameworks. 
+            </span> I intend to pursue a career in software development and am currently seeking 
             internship opportunities for Summer 2025.
           </p>
           <p className='font-dmsans text-lg py-4'>
             In my free time you can find me playing soccer, doing calligraphy, 
-            or watching action comedy movies. Let's connect! I'm always up for
+            or watching action comedy movies. <span className='text-white cursor-pointer hover:border-b-white border-b-transparent border-b-2 transition duration-300' onClick={() => {
+              handleLinkClick('.contact-section');
+            }}>Let's connect!</span> I'm always up for
              movie talk, answering your burning questions, or simply a friendly hello.
           </p>
         </div>

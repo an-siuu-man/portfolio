@@ -5,6 +5,7 @@ import DjangoIcon from './DjangoIcon';
 import DotnetIcon from './DotnetIcon';
 import GitIcon from './GitIcon';
 import NodeIcon from './NodeIcon';
+import GitlabIcon from './GitlabIcon';
 
 
 
@@ -48,6 +49,7 @@ export default function Frameworks() {
         <div className="min-h-[80px]"><DjangoIcon /></div>
         <div className="min-h-[80px]"><NodeIcon /></div>
         <div className="min-h-[80px]"><GitIcon /></div>
+        <div className="min-h-[80px]"><GitlabIcon /></div>
       </div>
     </div>
   );
