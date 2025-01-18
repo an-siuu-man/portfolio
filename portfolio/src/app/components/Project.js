@@ -22,7 +22,7 @@ export default function Project(props) {
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
-      <div className="project flex flex-col relative bg-[#222] justify-start items-center">
+      <div className="project w-full flex flex-col relative bg-[#222] justify-start items-center">
         <Image
           className={`w-full h-full rounded-tl-xl rounded-tr-xl transition duration-500 filter ${isHovered ? 'blur-0' : 'blur-sm'} object-cover`}          
           src={props.image}
