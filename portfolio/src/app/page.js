@@ -56,6 +56,14 @@ export default function Home() {
           <Projects />
           <Skills />
           <Contact />
+          <div>
+            <p className="font-dmsans text-white text-lg text-center">
+            Made with Next.js, Tailwind CSS, and a lot of micromanaging by my buddy.
+            </p>
+            <p className="font-dmsans text-white text-lg text-center">
+              © 2025 Ansuman Sharma. All rights reserved.
+            </p>
+          </div>
         </div>
       )}
     </div>

@@ -3,6 +3,7 @@ import GithubLink from "./GithubLink";
 import LinkedinLink from "./LinkedinLink";
 import GmailLink from "./GmailLink";
 import InstagramLink from "./InstagramLink";
+import DiscordLink from "./DiscordLink";
 export default function Contact() {
   const contactRef = useRef(null);
 
@@ -42,7 +43,7 @@ return (
                 <p className="font-dmsans text-lg">
                     If you would like to get in touch, please feel free to reach out and connect with me via any of the following platforms.
                 </p>
-                <div className="contact-icons grid grid-cols-4 justify-between items-start mt-4">
+                <div className="contact-icons grid grid-cols-5 justify-between items-start mt-4">
                   <div className="github-link min-h-[80px]">
                     <GithubLink />
                   </div>
@@ -54,6 +55,9 @@ return (
                   </div>  
                   <div className="instagram-link min-h-[80px]">
                     <InstagramLink />
+                  </div>
+                  <div className="discord-link min-h-[80px]">
+                    <DiscordLink />
                   </div>
                 </div>
             </div>

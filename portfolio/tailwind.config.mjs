@@ -13,9 +13,9 @@ export default {
       },
 
       fontFamily: {
-        poppins: ["Poppins"],
-        inter: ["Inter Tight"],
-        dmsans: ["DM Sans"],
+        poppins: ["-apple-system","Poppins"],
+        inter: ["-apple-system", "Inter Tight"],
+        dmsans: ["-apple-system", "DM Sans"],
         cursive: ["Parisienne"],
       },
       boxShadow: {

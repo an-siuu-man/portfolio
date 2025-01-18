@@ -64,6 +64,8 @@ export default function Navbar() {
 
     const handleScroll = () => {
       if (window.scrollY === 0) {
+        navbarContainer.style.backdropFilter = '';
+        navbar.style.backdropFilter = '';
         navbar.style.width = '90%';
         navbarContainer.style.backgroundColor = 'transparent';
         navbar.style.color = '';
@@ -133,13 +135,15 @@ export default function Navbar() {
   return (
     <div className="navbar-container transition duration-500 flex justify-center fixed w-full top-0 z-50 pb-4 items-center mb-4">
       <div className="navbar rounded-2xl w-[6%] duration-500 flex justify-between items-center p-4 ">
-        <h1 className="name-header z-50 font-cursive whitespace-nowrap absolute text-bold text-4xl">Ansuman Sharma</h1>
+        <h1 className="name-header z-50 font-cursive cursor-pointer hover:text-white duration-300 ease-in-out select-none whitespace-nowrap absolute text-bold text-4xl"
+         onClick={() => window.location.reload()}>
+          Ansuman Sharma</h1>
         <div className="links opacity-0 flex ml-auto">
-          <p onClick = {() => {handleAbout()}} className="link font-dmsans mx-[20px]   cursor-pointer hover:text-[#2e70db] duration-100">About</p>
-          <p onClick = {() => {handleClick('.experience-section')}} className="link font-dmsans mx-[20px]   cursor-pointer hover:text-[#2e70db] duration-100">Experience</p>
-          <p onClick = {() => {handleClick('.projects-section')}} className="link font-dmsans mx-[20px]   cursor-pointer hover:text-[#2e70db] duration-100">Projects</p>
-          <p onClick = {() => {handleClick('.skills-section')}} className="link font-dmsans mx-[20px]   cursor-pointer hover:text-[#2e70db] duration-100">Skills</p>
-          <p onClick = {() => {handleClick('.contact-section')}} className="link font-dmsans mx-[20px]   cursor-pointer hover:text-[#2e70db] duration-100">Contact</p>
+          <p onClick = {() => {handleAbout()}} className="link font-dmsans mx-[20px] select-none cursor-pointer hover:text-[#2e70db] duration-100">About</p>
+          <p onClick = {() => {handleClick('.experience-section')}} className="link font-dmsans mx-[20px] select-none cursor-pointer hover:text-[#2e70db] duration-100">Experience</p>
+          <p onClick = {() => {handleClick('.projects-section')}} className="link font-dmsans mx-[20px] select-none cursor-pointer hover:text-[#2e70db] duration-100">Projects</p>
+          <p onClick = {() => {handleClick('.skills-section')}} className="link font-dmsans mx-[20px] select-none cursor-pointer hover:text-[#2e70db] duration-100">Skills</p>
+          <p onClick = {() => {handleClick('.contact-section')}} className="link font-dmsans mx-[20px] select-none cursor-pointer hover:text-[#2e70db] duration-100">Contact</p>
         </div>
         <button className="block md:hidden ml-auto" onClick={toggleDropdown}>
           ☰

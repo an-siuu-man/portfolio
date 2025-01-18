@@ -20,7 +20,7 @@ export default function Skills() {
         };
 
         const observer = new IntersectionObserver(handleIntersection, {
-            threshold: 0.7
+            threshold: 0.4
         });
       
         if (skillsRef.current) {

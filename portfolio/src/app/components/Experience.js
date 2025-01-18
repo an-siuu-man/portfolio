@@ -20,7 +20,7 @@ export default function Experience() {
     };
 
     const observer = new IntersectionObserver(handleIntersection, {
-      threshold: 0.6
+      threshold: 0.3
     });
 
     if (experienceRef.current) {
@@ -42,7 +42,7 @@ export default function Experience() {
       <div
         className="experience  w-full flex px-20 flex-row items-stretch "
       >
-        <div className='experience-left w-[50%] flex flex-col border-[transparent] border-r-[#2e70db] border-r-2 justify-start items-center'>
+        <div className='experience-left w-[50%] flex flex-col border-[transparent] border-r-[#2e70db] border-r-2 transition items-center justify-start'>
           <h1 className="font-inter font-semibold text-6xl">Experience</h1>
         </div>
         <div className='experience-right w-[50%] flex flex-col p-4 transition duration-700 '>

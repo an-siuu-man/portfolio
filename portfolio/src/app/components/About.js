@@ -166,7 +166,7 @@ export default function About() {
       </div>
       <svg
         onClick={handleClick}
-        className="fixed bottom-0 left-1/2 cursor-pointer transform -translate-x-1/2 mb-4"
+        className="absolute bottom-0 left-1/2 cursor-pointer transform -translate-x-1/2 mb-4"
         width="100px"
         height="100px"
         viewBox="0 0 24 24"
