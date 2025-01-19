@@ -9,7 +9,7 @@ export default function LinkedinLink() {
   return (
     <div 
       className={`duration-300 ease-in-out cursor-pointer overflow-hidden ${isHovered ? 'max-h-[80px]' : 'max-h-[50px]'} flex flex-col items-center`}
-      onClick={() => window.open('https://linkedin.com', '_blank')}
+      onClick={() => window.open('https://www.linkedin.com/in/ansuman-sharma', '_blank')}
     >
       <div>
         <svg
