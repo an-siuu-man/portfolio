@@ -49,7 +49,7 @@ export default function Projects() {
             className="projects w-full transition duration-1000 flex px-20 flex-col items-center justify-start opacity-0">
                 <div className='flex w-full flex-row items-stretch mb-10'>
                     <div className='projects-left w-[50%] flex flex-col border-[transparent] border-r-[#2e70db] border-r-2 justify-start items-center'>
-                        <h1 className="font-inter font-semibold text-6xl">Projects</h1>
+                        <h1 className="font-inter font-semibold select-none text-6xl">Projects</h1>
                     </div>
                     <div className='projects-right w-[50%] flex flex-col p-4 transition duration-700 '>
                         <p className='font-dmsans text-lg'>

@@ -37,7 +37,7 @@ return (
     <div ref={contactRef} className="contact-section flex flex-col justify-start items-center transition duration-1000 my-[20vh] opacity-0">
         <div className="contact flex flex-row w-full px-20 items-stretch">
             <div className="contact-left w-[50%] flex flex-col border-[transparent] border-r-[#2e70db] border-r-2 justify-start items-center">
-                <h1 className="font-inter font-semibold text-6xl">Contact</h1>
+                <h1 className="font-inter select-none font-semibold text-6xl">Contact</h1>
             </div>
             <div className="contact-right w-[50%] flex flex-col p-4 transition duration-700">
                 <p className="font-dmsans text-lg">

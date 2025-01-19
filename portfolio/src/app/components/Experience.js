@@ -43,7 +43,7 @@ export default function Experience() {
         className="experience  w-full flex px-20 flex-row items-stretch "
       >
         <div className='experience-left w-[50%] flex flex-col border-[transparent] border-r-[#2e70db] border-r-2 transition items-center justify-start'>
-          <h1 className="font-inter font-semibold text-6xl">Experience</h1>
+          <h1 className="font-inter font-semibold select-none text-6xl">Experience</h1>
         </div>
         <div className='experience-right w-[50%] flex flex-col p-4 transition duration-700 '>
             <Job title  = 'Software Engineer Intern' margin= 'mb-5' company = 'Ascend Learning LLC' date = 'November 2024 - Present' location = 'Hybrid - Overland Park, KS' skills = {['.NET Core', 'SQL Server']} description = 'Utilizing C# .NET Core to develop API infrastructure for a new Faculty Course Enablement Portal in the Learning Management System. Collaborating within an agile team environment by participating in daily stand-ups, sprint planning, and iterative development cycles.'/>
