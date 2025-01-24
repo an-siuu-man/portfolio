@@ -24,6 +24,7 @@ export default function Home() {
       setTimeout(() => {
         polygon.style.opacity = '0';
         polygonText.style.opacity = '0';
+        polygon.style.transform = 'scale(0.01)';
         setTimeout(() => {
         setIsAnimationComplete(true);
         Body.style.overflowY = 'unset';
@@ -38,13 +39,9 @@ export default function Home() {
 
   return (
     <div className="flex flex-col items-center justify-center">
-      <div className="polygon-container transition duration-500 absolute top-1/2 left-[51%] transform -translate-x-1/2 -translate-y-1/2 flex z-50 justify-center items-center">
-        <svg height="140" width="180" xmlns="http://www.w3.org/2000/svg">
-          <polygon
-            points="75,7.5 129,38.5 129,101 75,132.5 21,101 21,38.5 75,7.5"
-            style={{ fill: 'none', stroke: 'white', strokeWidth: 4 }}
-            className="hexagon"
-          />
+      <div className="polygon-container transition duration-500 absolute top-[42%] mx-auto flex flex-row w-[80%] z-50 justify-center items-center">
+        <svg height="140" width="140" xmlns="http://www.w3.org/2000/svg" >
+        <polygon points="75,7.5 129,38.5 129,101 75,132.5 21,101 21,38.5 75,7.5" style={{ fill: 'none', stroke: 'white', strokeWidth: 4 }} className="hexagon" />
           <text className="polygon-text font-dmsans transition duration-500" x="75" y="75" textAnchor="middle" fill="white" fontSize="50" dy=".3em">AS</text>
         </svg>
       </div>
