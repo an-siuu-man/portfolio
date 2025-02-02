@@ -22,9 +22,7 @@ export default function Home() {
 
     if (polygon && polygonText && Body) {
       setTimeout(() => {
-        polygon.style.opacity = '0';
-        polygonText.style.opacity = '0';
-        polygon.style.transform = 'scale(0.01)';
+        polygon.style.transform = 'scale(0)';
         setTimeout(() => {
         setIsAnimationComplete(true);
         Body.style.overflowY = 'unset';

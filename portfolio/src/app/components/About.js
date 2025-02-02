@@ -72,21 +72,10 @@ export default function About() {
         handleResize();
       }, 300);
     }
-
-    const handleScroll = () => {
-      if (window.scrollY === 0) {
-        downArrow.style.strokeWidth = '1';
-
-      } else {
-        downArrow.style.strokeWidth = '0';
-      }
-    };
     window.addEventListener('resize', handleResize);
-    window.addEventListener('scroll', handleScroll);
 
     return () => {
       window.removeEventListener('resize', handleResize);
-      window.removeEventListener('scroll', handleScroll);
     };
   }, []);
 
@@ -164,24 +153,6 @@ export default function About() {
           </p>
         </div>
       </div>
-      <svg
-        onClick={handleClick}
-        className="absolute bottom-0 left-1/2 cursor-pointer transform -translate-x-1/2 mb-4"
-        width="100px"
-        height="100px"
-        viewBox="0 0 24 24"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          className="down-arrow opacity-0 cursor-pointer transition duration-500 hover:stroke-blue-500"
-          d="M7 10L12 15L17 10"
-          stroke="#a5a5a5"
-          strokeWidth="1"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        />
-      </svg>
     </div>
   );
 }
