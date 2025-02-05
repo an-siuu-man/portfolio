@@ -6,6 +6,7 @@ import DotnetIcon from './DotnetIcon';
 import GitIcon from './GitIcon';
 import NodeIcon from './NodeIcon';
 import GitlabIcon from './GitlabIcon';
+import ElectronIcon from './ElectronIcon';
 
 
 
@@ -45,6 +46,7 @@ export default function Frameworks() {
       <div className={`transition-all duration-700 ease-in-out grid grid-cols-3 gap-4 overflow-hidden justify-items-center items-start ${isVisible ? 'max-h-[500px] opacity-100' : 'max-h-0 opacity-0'}`}>
         <div className="min-h-[80px]"><ReactIcon /></div>
         <div className="min-h-[80px]"><NextIcon /></div>
+        <div className='min-h-[80px]'><ElectronIcon /></div>
         <div className="min-h-[80px]"><DotnetIcon /></div>
         <div className="min-h-[80px]"><DjangoIcon /></div>
         <div className="min-h-[80px]"><NodeIcon /></div>
