@@ -135,7 +135,7 @@ export default function Navbar() {
   return (
     <div className="navbar-container transition duration-500 flex justify-center fixed w-full top-0 z-50 pb-4 items-center mb-4">
       <div className="navbar rounded-2xl w-[6%] duration-500 flex justify-between items-center p-4 ">
-        <h1 className="name-header z-50 font-cursive cursor-pointer hover:text-white duration-300 ease-in-out select-none whitespace-nowrap absolute text-bold text-4xl"
+        <h1 className="name-header z-50 font-dmsans cursor-pointer hover:text-white duration-300 ease-in-out select-none whitespace-nowrap absolute text-bold text-4xl"
          onClick={() => window.location.reload()}>
           Ansuman Sharma</h1>
         <div className="links opacity-0 flex ml-auto">
