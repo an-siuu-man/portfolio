@@ -40,7 +40,7 @@ body {
 .hexagon {
   stroke-dasharray: 400;
   stroke-dashoffset: 400;
-  animation: draw 2.5s forwards;
+  animation: draw 2.5s cubic-bezier(0.6, 0, 0.4, 1) forwards;
 }
 
 @keyframes draw {
