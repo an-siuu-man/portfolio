@@ -28,7 +28,8 @@ html, body {
 
 body {
   color: #a5a5a5;
-  background: linear-gradient(to bottom left, #0f2027, #203a43, #2c5364);
+  /* background: linear-gradient(to bottom left, #0f2027, #203a43, #2c5364); */
+  background-color: #203a43;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -61,6 +62,11 @@ body {
   transition: opacity 0.9s ease-in-out;
 }
 
-.project-title {
-  background-color: rgba(31, 48, 55, 0.5);
+.projects-container {
+  scrollbar-width: none; /* For Firefox */
+  -ms-overflow-style: none; /* For Internet Explorer and Edge */
+}
+
+.projects-container::-webkit-scrollbar {
+  display: none; /* For Chrome, Safari, and Opera */
 }
