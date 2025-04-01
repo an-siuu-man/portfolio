@@ -1,57 +1,95 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useRef } from 'react';
+import Image from 'next/image';
+
+
+
+
 import Project from './Project';
-import TestProject from './TestProject';
+import lefticon from '../../../public/left.svg';
+import righticon from '../../../public/right.svg';
+
 
 import project1 from '../../../public/project1.png';
 import project2 from '../../../public/hackmidterms.jpg';
 import project3 from '../../../public/project3.png';
 import project4 from '../../../public/project4.png';
 import project5 from '../../../public/project5.jpg';
-
-
+import project6 from '../../../public/project6.jpeg';
 
 export default function Projects() {
+    const carouselRef = useRef(null);
 
-    const projectsRef = useRef(null);
-    
-    useEffect(() => {
-        const handleIntersection = (entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting ) {
-                    entry.target.style.opacity = '1';
+    const cardWidth = 450 + 16;
 
-                } else {
-                    entry.target.style.opacity = '0';
-                }
-                
-            });
-        };
-
-        const observer = new IntersectionObserver(handleIntersection, {
-            threshold: 0.3
+    const scrollLeft = () => {
+        carouselRef.current.scrollBy({
+            left: -cardWidth,
+            behavior: 'smooth'
         });
+    };
 
-        if (projectsRef.current) {
-            observer.observe(projectsRef.current);
+    const scrollRight = () => {
+        carouselRef.current.scrollBy({
+            left: cardWidth,
+            behavior: 'smooth'
+        });
+    };
+
+    const projectData = [
+        {
+            image: project5,
+            title: 'SafeChain',
+            skills: ['React.js', 'Express.js', 'Pinata IPFS', 'PostgreSQL'],
+            description: 'SafeChain is a decentralized communication system ensuring connectivity during emergencies and a winner of "Best Use of Pinata Track" at Block-a-thon 2025. Using blockchain, peer-to-peer communication, and decentralized storage, it enables secure information sharing among first responders, enhancing disaster response and coordination.',
+        },
+        {
+            image: project6,
+            title: 'Finders Keepers',
+            skills: ['React Native', 'Express.js', 'PostgreSQL', 'Twilio'],
+            description: 'A mobile app that helps college students find and report lost items using image recognition and location mapping. Users upload photos of found items, and fuzzy matching connects them with owners in real time to simplify the recovery process.',
+        },
+        {
+            image: project1,
+            github: 'https://github.com/an-siuu-man/code-lingo',
+            devpost: 'https://devpost.com/software/codelingo-lg9a4q',
+            title: 'CodeLingo</>',
+            skills: ['Next.js', 'PostgreSQL', 'Flask'],
+            description: 'Winner of Hack K-State 2024, CodeLingo is a web app that helps users learn C++ through dynamic visualizations. It turns code into interactive boxes that show variable updates and function calls in real time, making it easier for beginners to understand logic, follow execution flow, and build coding confidence.',
+        },
+        {
+            image: project2,
+            github: 'https://github.com/an-siuu-man/hackmidterms',
+            devpost: 'https://devpost.com/software/hackmidterms',
+            title: 'HackMidterms',
+            skills: ['Next.js', 'Pinata IPFS', 'Whisper by OpenAI', 'Flask'],
+            description: 'This web app helps users, especially students, create flashcards and practice questions from their online lectures through a speech-to-text model for quick revision and make studying easier.',
+        },
+        {
+            image: project3,
+            github: 'https://github.com/an-siuu-man/geogo',
+            devpost: 'https://devpost.com/software/geogo',
+            title: 'Geogo',
+            skills: ['Django', 'Flask', 'SerpAPI', 'Gemini'],
+            description: 'GeoGo is a web app that simplifies international travel planning by providing visa requirements, legal info, and cost estimates for over 100+ destinations. It helps users find budget-friendly, accessible countries and eliminates the stress of navigating complex travel documentation and logistics.',
+        },
+        {
+            image: project4,
+            github: 'https://github.com/manees-singh/NeoPyramid',
+            devpost: 'https://devpost.com/software/servo-tower',
+            title: 'NeoPyramid',
+            skills: ['C/C++', 'Arduino', 'Raspberry Pi'],
+            description: 'This project is a mechanical rubber-band shooting turret with a rotating barrel that can detect foreign objects and shoot accurately at them at distances more than 25ft.',
         }
-
-        return () => {
-            if (projectsRef.current) {
-                observer.unobserve(projectsRef.current);
-            }
-        };
-    }, []);
+    ];
 
     return (
-        <div className="projects-section flex flex-col justify-start items-center my-[20vh]">
-            <div
-            ref={projectsRef} 
-            className="projects w-full transition duration-1000 flex px-20 flex-col items-center justify-start opacity-0">
-                <div className='flex w-full flex-row items-stretch mb-10'>
-                    <div className='projects-left w-[50%] flex flex-col border-[transparent] border-r-[#2e70db] border-r-2 justify-start items-center'>
-                        <h1 className="font-inter font-semibold select-none text-6xl">Projects</h1>
+        <div className="projects-section flex flex-col justify-start items-center w-full">
+            <div className="projects w-full px-4 sm:px-20 flex flex-col items-center justify-start">
+                <div className='flex w-full flex-col md:flex-row items-stretch mb-10'>
+                    <div className='projects-left md:w-[50%] w-full flex flex-col border-[transparent] border-r-[#2e70db] md:border-r-2 justify-start items-center'>
+                        <h1 className="font-inter font-semibold select-none text-4xl sm:text-6xl">Projects</h1>
                     </div>
-                    <div className='projects-right w-[50%] flex flex-col p-4 transition duration-700 '>
+                    <div className='projects-right md:w-[50%] w-full flex flex-col p-4'>
                         <p className='font-dmsans text-lg'>
                             Most of my projects are products of intense collaborative efforts with my peers in hackathon environments.
                             I love participating in hackathons because I love the thrill of working with extremely tight deadlines and create solutions that have a real-world impact.
@@ -59,16 +97,47 @@ export default function Projects() {
                     </div>
                 </div>
 
-                <div className='projects-container flex flex-row justify-start gap-4 items-start flex-wrap w-full max-w-[90vw]'>
-                    <TestProject image={project1} github="https://github.com/an-siuu-man/code-lingo" devpost='https://devpost.com/software/codelingo-lg9a4q' skills={['Next.js', 'PostgreSQL', 'Flask']} title='CodeLingo</>' description='CodeLingo was created to help beginners understand code flow and structure, addressing the challenges of traditional learning methods. By turning code execution into interactive visuals, it makes complex concepts more accessible and easier to grasp. The goal is to help learners build confidence and deepen their understanding of programming through clear, engaging visuals.' />
-                    <TestProject image={project2} github="https://github.com/an-siuu-man/hackmidterms" devpost="https://devpost.com/software/hackmidterms" skills={['Next.js', 'Pinata IPFS', 'Whisper by OpenAI', 'Flask']} title='HackMidterms' description='This web app helps users, especially students, create flashcards and practice questions from their online lectures through a speech-to-text model for quick revision and make studying easier.' />
-                    <TestProject image={project3} github="https://github.com/an-siuu-man/geogo" devpost="https://devpost.com/software/geogo" skills={['Django', 'Flask', 'SerpAPI', 'Gemini']} title='Geogo' description='To make tourism easier, me and three of my peers developed this app to provide users with visa requirements, flight itineraries, popular tourist spots, and potential daily costs of traveling to any city with an international airport.' />
-                    <TestProject image={project4} github="https://github.com/manees-singh/NeoPyramid" devpost='https://devpost.com/software/servo-tower' skills={['C/C++', "Arduino", 'Raspberry Pi']} title='NeoPyramid' description='This project is a mechanical rubber-band shooting turret with a rotating barrel that can detect foreign objects and shoot accurately at them at distances more than 25ft.' />
-                    <TestProject image={project5} title='SafeChain' skills={['React.js', 'Express.js', 'Pinata IPFS', 'PostgreSQL']} description='SafeChain is a decentralized communication system that ensures connectivity during natural disasters when traditional networks fail. It uses peer-to-peer communication, decentralized storage, and blockchain for secure, efficient information sharing. The goal is to improve disaster response by providing a reliable network that works without traditional infrastructure, saving lives and boosting coordination.' />
+                <div className="relative flex justify-center w-full ">
+                <button
+                    onClick={scrollLeft}
+                    className="absolute left-0 z-10 px-3 py-2 transition"
+                    style={{ top: '100px' }} 
+                >
+                    { lefticon && <Image src={lefticon} alt="Left Arrow" width={50} height={50} /> }
+                </button>
 
-                    {/* <p className='font-dmsans text-xl my-10'>More coming soon!</p> */}
+                    <div className="w-[916px] overflow-x-hidden">
+                        <div
+                            ref={carouselRef}
+                            className="flex snap-x snap-mandatory overflow-x-auto scroll-smooth gap-4"
+                            style={{ scrollBehavior: 'smooth', scrollbarWidth: 'none' }}
+                        >
+                            {projectData.map((proj, i) => (
+                                <div key={i} className="w-[450px] snap-start flex-shrink-0 ">
+                                    <Project
+                                        image={proj.image}
+                                        title={proj.title}
+                                        skills={proj.skills}
+                                        github={proj.github}
+                                        devpost={proj.devpost}
+                                        description={proj.description}
+                                    />
+                                </div>
+                            ))}
+                            <p className='font-dmsans mt-4 text-lg flex items-start'>More projects coming soon!</p>
+
+                        </div>
+                    </div>
+
+                    <button
+                        onClick={scrollRight}
+                        className="absolute right-0 z-10 px-3 py-2 transition"
+                        style={{ top: '100px' }}
+                    >
+                        { righticon && <Image src={righticon} alt="Right Arrow" width={50} height={50} /> }
+                    </button>
+
                 </div>
-                
             </div>
         </div>
     );

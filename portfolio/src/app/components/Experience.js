@@ -6,40 +6,11 @@ import Job from './Job';
 export default function Experience() {
   const experienceRef = useRef(null);
 
-  useEffect(() => {
-    const handleIntersection = (entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          if (entry.target.style.opacity !== '1') {
-            entry.target.style.opacity = '1';
-          }
-        } else {
-          if (entry.target.style.opacity !== '0') {
-            entry.target.style.opacity = '0';
-          }
-        }
-      });
-    };
-
-    const observer = new IntersectionObserver(handleIntersection, {
-      threshold: 0.3
-    });
-
-    if (experienceRef.current) {
-      observer.observe(experienceRef.current);
-    }
-
-    return () => {
-      if (experienceRef.current) {
-        observer.unobserve(experienceRef.current);
-      }
-    };
-  }, []);
 
   return (
     <div
       ref={experienceRef}
-      className="experience-section flex flex-col transition duration-1000 justify-start items-stretch h-full opacity-0"
+      className="experience-section flex flex-col transition duration-1000 justify-center items-stretch h-screen "
     >
       <div
         className="experience  w-full flex px-20 flex-row items-stretch "

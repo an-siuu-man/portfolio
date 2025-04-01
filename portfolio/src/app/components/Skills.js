@@ -8,34 +8,8 @@ export default function Skills() {
 
     const skillsRef = useRef(null);
 
-    useEffect(() => {
-        const handleIntersection = (entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.opacity = '1';
-                } else {
-                    entry.target.style.opacity = '0';
-                }
-            });
-        };
-
-        const observer = new IntersectionObserver(handleIntersection, {
-            threshold: 0.4
-        });
-      
-        if (skillsRef.current) {
-            observer.observe(skillsRef.current);
-        }
-      
-        return () => {
-            if (skillsRef.current) {
-              observer.unobserve(skillsRef.current);
-            }
-          };
-    }, []);
-
     return (
-        <div ref={skillsRef} className="skills-section flex flex-col justify-start items-center transition duration-1000 my-[20vh] opacity-0 ">
+        <div ref={skillsRef} className="skills-section flex flex-col justify-center items-center transition duration-1000 h-screen">
             <div className="skills flex flex-row w-full px-20 items-stretch">
                 <div className="skills-left w-[50%] flex flex-col border-[transparent] border-r-[#2e70db] border-r-2 justify-start items-center">
                     <h1 className="font-inter font-semibold select-none text-6xl">Skills</h1>
