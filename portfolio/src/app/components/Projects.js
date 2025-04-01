@@ -74,7 +74,7 @@ export default function Projects() {
             devpost: 'https://devpost.com/software/geogo',
             title: 'Geogo',
             skills: ['Django', 'Flask', 'SerpAPI', 'Gemini'],
-            description: 'GeoGo is a web app that simplifies international travel planning by providing visa requirements, legal info, and cost estimates for over 100+ destinations. It helps users find budget-friendly, accessible countries and eliminates the stress of navigating complex travel documentation and logistics.',
+            description: 'Geogo is a web app that simplifies international travel planning by providing visa requirements, legal info, and cost estimates for over 100+ destinations. It helps users find budget-friendly, accessible countries and eliminates the stress of navigating complex travel documentation and logistics.',
         },
         {
             image: project4,
