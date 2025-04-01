@@ -38,12 +38,16 @@ export default function Projects() {
     const projectData = [
         {
             image: project5,
+            github: 'https://github.com/shivanshshrivas/SafeChain',
+            devpost: 'https://devpost.com/software/safe-chain-3zi5m6?_gl=1*1lugloz*_gcl_au*MjA5NjE1MDQ4NS4xNzQzNDc1NjE4*_ga*MTA1OTMxMDQ2OC4xNzQzNDc1NjE4*_ga_0YHJK3Y10M*MTc0MzU0ODIwOC41LjEuMTc0MzU0ODIxOC4wLjAuMA',
             title: 'SafeChain',
             skills: ['React.js', 'Express.js', 'Pinata IPFS', 'PostgreSQL'],
             description: 'SafeChain is a decentralized communication system ensuring connectivity during emergencies and a winner of "Best Use of Pinata Track" at Block-a-thon 2025. Using blockchain, peer-to-peer communication, and decentralized storage, it enables secure information sharing among first responders, enhancing disaster response and coordination.',
         },
         {
             image: project6,
+            github: 'https://github.com/an-siuu-man/finders-keepers',
+            devpost: 'https://devpost.com/software/finders-seeekers?',
             title: 'Finders Keepers',
             skills: ['React Native', 'Express.js', 'PostgreSQL', 'Twilio'],
             description: 'A mobile app that helps college students find and report lost items using image recognition and location mapping. Users upload photos of found items, and fuzzy matching connects them with owners in real time to simplify the recovery process.',
