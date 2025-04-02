@@ -19,7 +19,7 @@ export default function Project( props ) {
     
     return (
         <div className={`card ${isFocused ? `max-h-[700px]` : "max-h-64"} w-[450px] bg-[#1f3037] overflow-hidden rounded-3xl shadow transition-all ease-custom-ease duration-700`} 
-        onMouseEnter={() => setIsFocused(true)}
+        onMouseDown={() => setIsFocused(true)}
         onMouseLeave={() => setIsFocused(false)}
             >
             <div className="card-image h-64 w-full flex flex-col overflow-hidden relative">
@@ -30,7 +30,7 @@ export default function Project( props ) {
                     objectFit="cover" 
                     className={`rounded-tr-3xl rounded-tl-3xl transition-all duration-700 ease-in-out ${isFocused ? '' : 'blur-md'}`}
                 />
-                <h1 className={`project-title flex items-center justify-center py-2 absolute select-none bg-[#333] h-full w-full text-center font-inter font-semibold text-[#fafafa] text-4xl transition-opacity duration-700 ${isFocused ? 'opacity-0' : 'opacity-50'}`}>
+                <h1 className={`project-title flex items-center justify-center py-2 absolute select-none bg-[#333] h-full w-full text-center font-inter font-semibold text-[#fafafa] text-4xl transition-opacity duration-700 ${isFocused ? 'cursor-default opacity-0' : 'cursor-pointer  opacity-50'}`}>
                 {props.title}
                 </h1>
             </div>
