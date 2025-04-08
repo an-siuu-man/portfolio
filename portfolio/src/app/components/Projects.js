@@ -15,6 +15,8 @@ import project3 from '../../../public/project3.png';
 import project4 from '../../../public/project4.png';
 import project5 from '../../../public/project5.jpg';
 import project6 from '../../../public/project6.jpeg';
+import project7 from "../../../public/bldr.png";
+
 
 export default function Projects() {
     const carouselRef = useRef(null);
@@ -36,6 +38,14 @@ export default function Projects() {
     };
 
     const projectData = [
+        {
+            image: project7,
+            github: 'https://github.com/shivanshshrivas/bldr',
+            devpost: 'https://devpost.com/software/bldr?',
+            title: 'bldr',
+            skills: ['Next.js', 'Express.js', 'PostgreSQL', 'MongoDB'],
+            description: "Winner of 'Best use of MongoDB' at HackKU 25, bldr is a smart scheduling assistant that helps college students plan courses. Upload your transcript, and it suggests the best classes for your degree. The built-in chatbot lets the user refine their schedule by letting them ask about core requirements, avoid early classes, or explore electives, all through a simple, natural conversation powered by AI."
+        },
         {
             image: project5,
             github: 'https://github.com/shivanshshrivas/SafeChain',
