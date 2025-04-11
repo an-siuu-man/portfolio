@@ -19,7 +19,7 @@ export default function Project( props ) {
     
     return (
         <div className={`card ${isFocused ? `max-h-[700px]` : "max-h-64"} w-[450px] bg-[#1f3037] overflow-hidden rounded-3xl shadow transition-all ease-custom-ease duration-700`} 
-        onMouseDown={() => setIsFocused(true)}
+        onMouseEnter={() => setIsFocused(true)}
         onMouseLeave={() => setIsFocused(false)}
             >
             <div className="card-image h-64 w-full flex flex-col overflow-hidden relative">
